@@ -13,7 +13,6 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         descriptionLabel.textColor = UIColor.primaryFontColor
         descriptionLabel.text = "Capture what’s on your mind & get a reminder later at the right place or time. You can also add voice memo & other features"
     }
@@ -21,6 +20,7 @@ class WelcomeViewController: UIViewController {
     @IBAction func onClicked(_ sender: Any) {
         let homeViewController = UINavigationController(rootViewController: HomeViewController())
         homeViewController.modalPresentationStyle = .fullScreen
+        homeViewController.navigationBar.backgroundColor = .primaryBackgroundColor
         self.present(homeViewController, animated: true)
     }
     

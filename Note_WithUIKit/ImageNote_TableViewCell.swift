@@ -30,7 +30,7 @@ class ImageNote_TableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top:20, left: 20, bottom: 20, right: 20))
-        contentView.backgroundColor = UIColor.primaryBackgroundColor
+        contentView.backgroundColor = .white
         contentView.layer.cornerRadius = 10
     }
     

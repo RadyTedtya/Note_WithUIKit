@@ -25,6 +25,8 @@ class HomeViewController: UIViewController {
         title = "Home View"
         tableView.tableHeaderView = searchController.searchBar
         
+        searchController.searchBar.barTintColor = .primaryBackgroundColor
+        
     }
     
     @objc func nextScreen() {
@@ -37,6 +39,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ImageNote_TableViewCell", for: indexPath) as! ImageNote_TableViewCell
+        cell.backgroundColor = .primaryBackgroundColor
         return cell
     }
     
@@ -51,5 +54,10 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 430
     }
+    
+    
+    
+    
+    
     
 }

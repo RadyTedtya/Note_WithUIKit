@@ -38,13 +38,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="Zmp-81-sEn">
-                        <rect key="frame" x="15" y="85" width="460" height="281"/>
+                        <rect key="frame" x="20" y="85" width="450" height="220"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="281" id="TXv-fp-UBS"/>
+                            <constraint firstAttribute="height" constant="220" id="TXv-fp-UBS"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DK-2n-hBw">
-                        <rect key="frame" x="15" y="381" width="460" height="50"/>
+                        <rect key="frame" x="15" y="320" width="460" height="111"/>
                         <string key="text">Tum dicere exorsus est laborum et via procedat oratio quaerimus igitur, quid sit. Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si ob……</string>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
@@ -61,8 +61,8 @@
                     <constraint firstItem="8DK-2n-hBw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="a4F-Sw-Xhx"/>
                     <constraint firstItem="gzs-xA-gZU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="bBB-jv-jPd"/>
                     <constraint firstItem="8DK-2n-hBw" firstAttribute="top" secondItem="Zmp-81-sEn" secondAttribute="bottom" constant="15" id="cUQ-7m-YM5"/>
-                    <constraint firstItem="Zmp-81-sEn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="d4m-3f-Kh9"/>
-                    <constraint firstAttribute="trailing" secondItem="Zmp-81-sEn" secondAttribute="trailing" constant="15" id="h6i-QY-SBz"/>
+                    <constraint firstItem="Zmp-81-sEn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="d4m-3f-Kh9"/>
+                    <constraint firstAttribute="trailing" secondItem="Zmp-81-sEn" secondAttribute="trailing" constant="20" id="h6i-QY-SBz"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

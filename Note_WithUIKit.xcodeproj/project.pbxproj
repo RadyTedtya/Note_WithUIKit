@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D336FA3029A071A400200E36 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336FA2F29A071A400200E36 /* Color+Extension.swift */; };
+		D336FA3329A0822A00200E36 /* Reminder_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336FA3129A0822A00200E36 /* Reminder_TableViewCell.swift */; };
+		D336FA3429A0822A00200E36 /* Reminder_TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D336FA3229A0822A00200E36 /* Reminder_TableViewCell.xib */; };
 		D37256B4299FA1170056AD28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37256B3299FA1170056AD28 /* AppDelegate.swift */; };
 		D37256B6299FA1170056AD28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37256B5299FA1170056AD28 /* SceneDelegate.swift */; };
 		D37256B8299FA1170056AD28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37256B7299FA1170056AD28 /* ViewController.swift */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		D336FA2F29A071A400200E36 /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		D336FA3129A0822A00200E36 /* Reminder_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder_TableViewCell.swift; sourceTree = "<group>"; };
+		D336FA3229A0822A00200E36 /* Reminder_TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Reminder_TableViewCell.xib; sourceTree = "<group>"; };
 		D37256B0299FA1170056AD28 /* Note_WithUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Note_WithUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D37256B3299FA1170056AD28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D37256B5299FA1170056AD28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				D37256EE299FA55F0056AD28 /* HomeViewController.xib */,
 				D37256F1299FA9050056AD28 /* ImageNote_TableViewCell.swift */,
 				D37256F2299FA9050056AD28 /* ImageNote_TableViewCell.xib */,
+				D336FA3129A0822A00200E36 /* Reminder_TableViewCell.swift */,
+				D336FA3229A0822A00200E36 /* Reminder_TableViewCell.xib */,
 				D37256E9299FA5370056AD28 /* Main.storyboard */,
 				D37256BC299FA1180056AD28 /* Assets.xcassets */,
 				D37256C1299FA1180056AD28 /* Info.plist */,
@@ -262,6 +268,7 @@
 				D37256E6299FA47E0056AD28 /* WelcomeViewController.xib in Resources */,
 				D37256BD299FA1180056AD28 /* Assets.xcassets in Resources */,
 				D37256F0299FA55F0056AD28 /* HomeViewController.xib in Resources */,
+				D336FA3429A0822A00200E36 /* Reminder_TableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +300,7 @@
 				D37256E5299FA47E0056AD28 /* WelcomeViewController.swift in Sources */,
 				D37256B4299FA1170056AD28 /* AppDelegate.swift in Sources */,
 				D37256B6299FA1170056AD28 /* SceneDelegate.swift in Sources */,
+				D336FA3329A0822A00200E36 /* Reminder_TableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
