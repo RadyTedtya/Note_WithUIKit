@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageNote_TableViewCell" rowHeight="391" id="KGk-i7-Jjw" customClass="ImageNote_TableViewCell" customModule="Note_WithUIKit" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="490" height="430"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageNote_TableViewCell" rowHeight="407" id="KGk-i7-Jjw" customClass="ImageNote_TableViewCell" customModule="Note_WithUIKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="490" height="446"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="490" height="430"/>
+                <rect key="frame" x="0.0" y="0.0" width="490" height="446"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summer Vacation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yOq-co-Yka">
@@ -37,37 +37,42 @@
                         <color key="textColor" red="0.31764705879999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l1H-a1-A3m">
-                        <rect key="frame" x="29" y="371" width="435" height="48"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="Zmp-81-sEn">
+                        <rect key="frame" x="15" y="85" width="460" height="281"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="281" id="TXv-fp-UBS"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DK-2n-hBw">
+                        <rect key="frame" x="15" y="381" width="460" height="50"/>
                         <string key="text">Tum dicere exorsus est laborum et via procedat oratio quaerimus igitur, quid sit. Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si ob……</string>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="Zmp-81-sEn">
-                        <rect key="frame" x="15" y="85" width="460" height="281"/>
-                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Zmp-81-sEn" firstAttribute="top" secondItem="gzs-xA-gZU" secondAttribute="bottom" constant="15" id="8jd-Cv-aMa"/>
+                    <constraint firstAttribute="trailing" secondItem="8DK-2n-hBw" secondAttribute="trailing" constant="15" id="5O0-Dj-Zzi"/>
                     <constraint firstItem="RdD-0D-Xcp" firstAttribute="leading" secondItem="gzs-xA-gZU" secondAttribute="trailing" constant="10" id="8m2-Fg-fg2"/>
+                    <constraint firstAttribute="bottom" secondItem="8DK-2n-hBw" secondAttribute="bottom" constant="15" id="HCU-eC-rVn"/>
                     <constraint firstItem="gzs-xA-gZU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="JCB-8E-rvL"/>
                     <constraint firstItem="yOq-co-Yka" firstAttribute="leading" secondItem="gzs-xA-gZU" secondAttribute="trailing" constant="10" id="PbH-Bp-xHn"/>
+                    <constraint firstItem="Zmp-81-sEn" firstAttribute="top" secondItem="gzs-xA-gZU" secondAttribute="bottom" constant="15" id="W1R-yt-Tfm"/>
+                    <constraint firstItem="8DK-2n-hBw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="a4F-Sw-Xhx"/>
                     <constraint firstItem="gzs-xA-gZU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="bBB-jv-jPd"/>
-                    <constraint firstItem="Zmp-81-sEn" firstAttribute="leading" secondItem="gzs-xA-gZU" secondAttribute="leading" id="i6y-n8-lhk"/>
-                    <constraint firstItem="Zmp-81-sEn" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="kHj-yJ-sry"/>
+                    <constraint firstItem="8DK-2n-hBw" firstAttribute="top" secondItem="Zmp-81-sEn" secondAttribute="bottom" constant="15" id="cUQ-7m-YM5"/>
+                    <constraint firstItem="Zmp-81-sEn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="d4m-3f-Kh9"/>
+                    <constraint firstAttribute="trailing" secondItem="Zmp-81-sEn" secondAttribute="trailing" constant="15" id="h6i-QY-SBz"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="dateLabel" destination="RdD-0D-Xcp" id="lzg-dB-Z9g"/>
-                <outlet property="descriptionLabel" destination="l1H-a1-A3m" id="Op8-F0-Keh"/>
                 <outlet property="pictureImageView" destination="Zmp-81-sEn" id="7MG-YS-peb"/>
                 <outlet property="profilePictureImage" destination="gzs-xA-gZU" id="oiJ-4c-HYf"/>
                 <outlet property="titleLabel" destination="yOq-co-Yka" id="pbi-jp-SoX"/>
             </connections>
-            <point key="canvasLocation" x="470.9923664122137" y="142.6056338028169"/>
+            <point key="canvasLocation" x="470.22900763358774" y="147.88732394366198"/>
         </tableViewCell>
     </objects>
     <resources>

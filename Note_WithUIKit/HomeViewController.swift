@@ -14,11 +14,8 @@ class HomeViewController: UIViewController {
     let searchController: UISearchController! = .init()
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
         setup()
-        
     }
 
     func setup() {
@@ -28,23 +25,13 @@ class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "person.crop.circle.fill"), style: .plain, target: nibBundle, action: #selector(nextScreen))
         title = "Home View"
         tableView.tableHeaderView = searchController.searchBar
+        
+        
     }
     
     @objc func nextScreen() {
         print("Profile Clicked")
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -52,8 +39,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ImageNote_TableViewCell", for: indexPath) as! ImageNote_TableViewCell
-        
-        
         return cell
     }
     
@@ -61,6 +46,10 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         return 10
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+        
+    }
     
     
 }
