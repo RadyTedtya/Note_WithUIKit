@@ -37,9 +37,8 @@
                         <color key="textColor" red="0.31764705879999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KWp-NQ-4rM">
-                        <rect key="frame" x="21" y="83" width="495" height="29"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWp-NQ-4rM">
+                        <rect key="frame" x="15" y="85" width="506" height="161"/>
                         <attributedString key="attributedText">
                             <fragment content="Label Label Label">
                                 <attributes>
@@ -53,8 +52,12 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="KWp-NQ-4rM" secondAttribute="trailing" constant="15" id="1j6-pK-8Ai"/>
+                    <constraint firstAttribute="bottom" secondItem="KWp-NQ-4rM" secondAttribute="bottom" constant="15" id="DfA-GK-27i"/>
                     <constraint firstItem="ViY-t3-6bx" firstAttribute="leading" secondItem="9pj-dt-fAf" secondAttribute="trailing" constant="10" id="Ydr-is-mzF"/>
+                    <constraint firstItem="KWp-NQ-4rM" firstAttribute="top" secondItem="9pj-dt-fAf" secondAttribute="bottom" constant="15" id="Zfa-sq-Zbl"/>
                     <constraint firstItem="9pj-dt-fAf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="cAb-x5-eoC"/>
+                    <constraint firstItem="KWp-NQ-4rM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="oAj-gK-y9w"/>
                     <constraint firstItem="9pj-dt-fAf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="uKU-lD-Es1"/>
                     <constraint firstItem="Dpr-8O-hym" firstAttribute="leading" secondItem="9pj-dt-fAf" secondAttribute="trailing" constant="10" id="uiF-dz-mGx"/>
                 </constraints>
