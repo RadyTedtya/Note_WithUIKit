@@ -15,9 +15,55 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="536" height="261"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newspaper.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9pj-dt-fAf">
+                        <rect key="frame" x="15" y="16" width="55" height="53.666666666666671"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="55" id="0tR-Hm-DJu"/>
+                            <constraint firstAttribute="width" constant="55" id="SZr-2z-x7O"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summer Vacation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ViY-t3-6bx">
+                        <rect key="frame" x="80" y="21" width="128" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 Aug 2020, 07:49 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dpr-8O-hym">
+                        <rect key="frame" x="80" y="48" width="120" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <color key="textColor" red="0.31764705879999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KWp-NQ-4rM">
+                        <rect key="frame" x="21" y="83" width="495" height="29"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Label Label Label">
+                                <attributes>
+                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="NSFont" metaFont="system"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ViY-t3-6bx" firstAttribute="leading" secondItem="9pj-dt-fAf" secondAttribute="trailing" constant="10" id="Ydr-is-mzF"/>
+                    <constraint firstItem="9pj-dt-fAf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="cAb-x5-eoC"/>
+                    <constraint firstItem="9pj-dt-fAf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="uKU-lD-Es1"/>
+                    <constraint firstItem="Dpr-8O-hym" firstAttribute="leading" secondItem="9pj-dt-fAf" secondAttribute="trailing" constant="10" id="uiF-dz-mGx"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <point key="canvasLocation" x="174.04580152671755" y="96.126760563380287"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="newspaper.circle.fill" catalog="system" width="128" height="123"/>
+    </resources>
 </document>
