@@ -14,7 +14,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(nextScreen))
         setup()
     }
 
@@ -22,11 +21,9 @@ class HomeViewController: UIViewController {
         tableView.register(UINib(nibName: "ImageNote_TableViewCell", bundle: nibBundle), forCellReuseIdentifier: "ImageNote_TableViewCell")
         tableView.dataSource = self
         tableView.delegate = self
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: nibBundle, action: #selector(nextScreen))
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(nextScreen))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: self, action: #selector(nextScreen))
         title = "Home View"
         tableView.tableHeaderView = searchController.searchBar
-        
         
     }
     
