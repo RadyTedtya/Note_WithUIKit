@@ -9,21 +9,20 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        descriptionLabel.textColor = UIColor.primaryFontColor
+        descriptionLabel.text = "Capture what’s on your mind & get a reminder later at the right place or time. You can also add voice memo & other features"
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onClicked(_ sender: Any) {
+        let homeViewController = UINavigationController(rootViewController: HomeViewController())
+        homeViewController.modalPresentationStyle = .fullScreen
+        self.present(homeViewController, animated: true)
     }
-    */
+    
 
 }

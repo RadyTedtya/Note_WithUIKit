@@ -11,7 +11,10 @@ import UIKit
 extension UIColor {
     
     static let primaryColor = UIColor.init(hex: 0xFFFFFF)
+    
     static let primaryBackgroundColor = UIColor.init(hex: 0xEDEDED)
+    
+    static let primaryFontColor = UIColor.init(hex: 0x535353)
     
    convenience init(red: Int, green: Int, blue: Int) {
        assert(red >= 0 && red <= 255, "Invalid red component")
