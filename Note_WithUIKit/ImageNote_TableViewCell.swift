@@ -9,8 +9,13 @@ import UIKit
 
 class ImageNote_TableViewCell: UITableViewCell {
     
-    private let cell:String = "ImageNote_TableViewCell"
-
+    @IBOutlet weak var profilePictureImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var pictureImageView: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

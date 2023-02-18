@@ -25,8 +25,8 @@ class HomeViewController: UIViewController {
         tableView.register(UINib(nibName: "ImageNote_TableViewCell", bundle: nibBundle), forCellReuseIdentifier: "ImageNote_TableViewCell")
         tableView.dataSource = self
         tableView.delegate = self
-        title = "Home View"
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "person.crop.circle.fill"), style: .plain, target: nibBundle, action: #selector(nextScreen))
+        title = "Home View"
         tableView.tableHeaderView = searchController.searchBar
     }
     
@@ -52,6 +52,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ImageNote_TableViewCell", for: indexPath) as! ImageNote_TableViewCell
+        
+        
         return cell
     }
     
