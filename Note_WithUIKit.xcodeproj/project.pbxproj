@@ -26,6 +26,12 @@
 		D37256F0299FA55F0056AD28 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D37256EE299FA55F0056AD28 /* HomeViewController.xib */; };
 		D37256F3299FA9050056AD28 /* ImageNote_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37256F1299FA9050056AD28 /* ImageNote_TableViewCell.swift */; };
 		D37256F4299FA9050056AD28 /* ImageNote_TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D37256F2299FA9050056AD28 /* ImageNote_TableViewCell.xib */; };
+		D3E238C829A1CB72004E962B /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E238C729A1CB72004E962B /* TestView.xib */; };
+		D3E238CA29A1CB82004E962B /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238C929A1CB82004E962B /* TestView.swift */; };
+		D3E238D329A1D164004E962B /* NoteType_CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238D129A1D164004E962B /* NoteType_CollectionViewCell.swift */; };
+		D3E238D429A1D164004E962B /* NoteType_CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E238D229A1D164004E962B /* NoteType_CollectionViewCell.xib */; };
+		D3E238D629A1D5D5004E962B /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238D529A1D5D5004E962B /* CollectionViewController.swift */; };
+		D3E238D829A1DE58004E962B /* NoteType_CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238D729A1DE58004E962B /* NoteType_CollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +75,12 @@
 		D37256EE299FA55F0056AD28 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		D37256F1299FA9050056AD28 /* ImageNote_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNote_TableViewCell.swift; sourceTree = "<group>"; };
 		D37256F2299FA9050056AD28 /* ImageNote_TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageNote_TableViewCell.xib; sourceTree = "<group>"; };
+		D3E238C729A1CB72004E962B /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
+		D3E238C929A1CB82004E962B /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		D3E238D129A1D164004E962B /* NoteType_CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteType_CollectionViewCell.swift; sourceTree = "<group>"; };
+		D3E238D229A1D164004E962B /* NoteType_CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteType_CollectionViewCell.xib; sourceTree = "<group>"; };
+		D3E238D529A1D5D5004E962B /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		D3E238D729A1DE58004E962B /* NoteType_CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteType_CollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +135,14 @@
 				D37256B3299FA1170056AD28 /* AppDelegate.swift */,
 				D37256B5299FA1170056AD28 /* SceneDelegate.swift */,
 				D37256B7299FA1170056AD28 /* ViewController.swift */,
+				D3E238C929A1CB82004E962B /* TestView.swift */,
+				D3E238C729A1CB72004E962B /* TestView.xib */,
 				D37256E3299FA47E0056AD28 /* WelcomeViewController.swift */,
 				D37256E4299FA47E0056AD28 /* WelcomeViewController.xib */,
+				D3E238D529A1D5D5004E962B /* CollectionViewController.swift */,
+				D3E238D729A1DE58004E962B /* NoteType_CollectionViewController.swift */,
+				D3E238D129A1D164004E962B /* NoteType_CollectionViewCell.swift */,
+				D3E238D229A1D164004E962B /* NoteType_CollectionViewCell.xib */,
 				D37256ED299FA55F0056AD28 /* HomeViewController.swift */,
 				D37256EE299FA55F0056AD28 /* HomeViewController.xib */,
 				D336FA3929A093EE00200E36 /* AudioNote_TableViewCell.swift */,
@@ -269,8 +287,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3E238C829A1CB72004E962B /* TestView.xib in Resources */,
 				D37256EA299FA5370056AD28 /* Main.storyboard in Resources */,
 				D336FA3C29A093EE00200E36 /* AudioNote_TableViewCell.xib in Resources */,
+				D3E238D429A1D164004E962B /* NoteType_CollectionViewCell.xib in Resources */,
 				D37256F4299FA9050056AD28 /* ImageNote_TableViewCell.xib in Resources */,
 				D37256E6299FA47E0056AD28 /* WelcomeViewController.xib in Resources */,
 				D37256BD299FA1180056AD28 /* Assets.xcassets in Resources */,
@@ -300,12 +320,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3E238D629A1D5D5004E962B /* CollectionViewController.swift in Sources */,
 				D37256EF299FA55F0056AD28 /* HomeViewController.swift in Sources */,
+				D3E238D829A1DE58004E962B /* NoteType_CollectionViewController.swift in Sources */,
 				D336FA3029A071A400200E36 /* Color+Extension.swift in Sources */,
 				D37256F3299FA9050056AD28 /* ImageNote_TableViewCell.swift in Sources */,
 				D37256B8299FA1170056AD28 /* ViewController.swift in Sources */,
 				D37256E5299FA47E0056AD28 /* WelcomeViewController.swift in Sources */,
+				D3E238D329A1D164004E962B /* NoteType_CollectionViewCell.swift in Sources */,
 				D37256B4299FA1170056AD28 /* AppDelegate.swift in Sources */,
+				D3E238CA29A1CB82004E962B /* TestView.swift in Sources */,
 				D336FA3B29A093EE00200E36 /* AudioNote_TableViewCell.swift in Sources */,
 				D37256B6299FA1170056AD28 /* SceneDelegate.swift in Sources */,
 				D336FA3329A0822A00200E36 /* Reminder_TableViewCell.swift in Sources */,
