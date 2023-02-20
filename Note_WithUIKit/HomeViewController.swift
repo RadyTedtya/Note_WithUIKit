@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     let searchController: UISearchController! = .init()
+    let collectionView: NoteType_CollectionViewController = .init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,15 +19,13 @@ class HomeViewController: UIViewController {
     }
 
     func setup() {
-        tableView.register(UINib(nibName: "ImageNote_TableViewCell", bundle: nibBundle), forCellReuseIdentifier: "ImageNote_TableViewCell")
+        tableView.register(ImageNoteTableViewCell.self)
         tableView.dataSource = self
         tableView.delegate = self
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: self, action: #selector(nextScreen))
         title = "Home View"
         tableView.tableHeaderView = searchController.searchBar
-        
         searchController.searchBar.barTintColor = .primaryBackgroundColor
-        
     }
     
     @objc func nextScreen() {
@@ -38,9 +37,20 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ImageNote_TableViewCell", for: indexPath) as! ImageNote_TableViewCell
+        let cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
         cell.backgroundColor = .primaryBackgroundColor
-        return cell
+//        let note: Note = Note.dummyImageNote
+////        cell.configure(note)
+//        let image = UIImage(named: note.image ?? "photo")
+//        cell.titleLabel.text = note.title.capitalized
+//        cell.dateLabel.text = note.date
+//        cell.pictureImageView = image
+//        cell.descriptionLabel.text = note.description?.capitalized
+        if (indexPath.row%2) == 0 {
+            return cell
+        } else {
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,6 +65,12 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         return 430
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: .init(x: 0, y: 0, width: tableView.frame.width, height: 80))
+        headerView.backgroundColor = .primaryBackgroundColor
+//        headerView.addSubview(collectionView.view)
+        return headerView
+    }
     
     
     
