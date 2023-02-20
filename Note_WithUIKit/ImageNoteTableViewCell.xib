@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageNote_TableViewCell" rowHeight="407" id="KGk-i7-Jjw" customClass="ImageNote_TableViewCell" customModule="Note_WithUIKit" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="407" id="KGk-i7-Jjw" customClass="ImageNoteTableViewCell" customModule="Note_WithUIKit" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="490" height="446"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -67,6 +67,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="dateLabel" destination="RdD-0D-Xcp" id="lzg-dB-Z9g"/>
+                <outlet property="descriptionLabel" destination="8DK-2n-hBw" id="J6u-zG-aOw"/>
                 <outlet property="pictureImageView" destination="Zmp-81-sEn" id="7MG-YS-peb"/>
                 <outlet property="profilePictureImage" destination="gzs-xA-gZU" id="oiJ-4c-HYf"/>
                 <outlet property="titleLabel" destination="yOq-co-Yka" id="pbi-jp-SoX"/>

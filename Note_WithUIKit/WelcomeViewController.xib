@@ -21,17 +21,14 @@
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome" translatesAutoresizingMaskIntoConstraints="NO" id="xrD-eV-ji3">
                     <rect key="frame" x="0.0" y="358" width="393" height="494"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="494" id="jZk-2r-H3i"/>
-                    </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIV-Yz-6aR">
-                    <rect key="frame" x="25" y="155.66666666666666" width="343" height="21"/>
+                    <rect key="frame" x="25" y="155.66666666666666" width="343" height="22.666666666666657"/>
                     <attributedString key="attributedText">
                         <fragment content="Label">
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                <font key="NSFont" size="15" name=".SFNS-Regular"/>
+                                <font key="NSFont" metaFont="system" size="15"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.25" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
@@ -64,16 +61,16 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="h4J-v0-wxL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="3ck-Nm-mjL"/>
-                <constraint firstItem="xrD-eV-ji3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6M4-14-eaO"/>
-                <constraint firstItem="xrD-eV-ji3" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.579812" id="Ewg-DJ-FBU"/>
-                <constraint firstItem="xrD-eV-ji3" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="IN3-xO-hEg"/>
+                <constraint firstItem="xrD-eV-ji3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Div-sC-Zib"/>
                 <constraint firstItem="h4J-v0-wxL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="45" id="IQ2-QP-qTe"/>
+                <constraint firstItem="xrD-eV-ji3" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Jtu-h2-XeN"/>
                 <constraint firstItem="eIV-Yz-6aR" firstAttribute="top" secondItem="h4J-v0-wxL" secondAttribute="bottom" constant="20" id="L6Y-sU-3jN"/>
+                <constraint firstItem="xrD-eV-ji3" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.58" id="QpV-h0-6QF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eIV-Yz-6aR" secondAttribute="trailing" constant="25" id="aN9-p8-VXJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pt3-ks-yxW" secondAttribute="bottom" constant="35" id="aYU-h8-2ha"/>
-                <constraint firstItem="xrD-eV-ji3" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="gZa-hk-WSv"/>
                 <constraint firstItem="eIV-Yz-6aR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="i9o-6p-Xac"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pt3-ks-yxW" secondAttribute="trailing" constant="30" id="men-wN-9LB"/>
+                <constraint firstAttribute="bottom" secondItem="xrD-eV-ji3" secondAttribute="bottom" id="vLX-xh-AAa"/>
             </constraints>
             <point key="canvasLocation" x="-34.351145038167935" y="19.718309859154932"/>
         </view>

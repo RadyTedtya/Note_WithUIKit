@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     let searchController: UISearchController! = .init()
-    let collectionView: NoteType_CollectionViewController = .init()
+    let collectionView: NoteTypeCollectionViewController = .init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,18 +39,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
         cell.backgroundColor = .primaryBackgroundColor
-//        let note: Note = Note.dummyImageNote
-////        cell.configure(note)
-//        let image = UIImage(named: note.image ?? "photo")
-//        cell.titleLabel.text = note.title.capitalized
-//        cell.dateLabel.text = note.date
-//        cell.pictureImageView = image
-//        cell.descriptionLabel.text = note.description?.capitalized
-        if (indexPath.row%2) == 0 {
-            return cell
-        } else {
-            return cell
-        }
+        return cell.configureCell(cell: cell, cellIndex: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,13 +55,16 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView(frame: .init(x: 0, y: 0, width: tableView.frame.width, height: 80))
-        headerView.backgroundColor = .primaryBackgroundColor
-//        headerView.addSubview(collectionView.view)
+        let headerView = UIView(frame: .init(x: 0, y: 0, width: view.frame.width, height: 80))
+        headerView.addSubview(collectionView.view)
         return headerView
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 80
+    }
     
+ 
     
     
     

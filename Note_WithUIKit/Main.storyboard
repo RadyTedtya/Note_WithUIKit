@@ -11,12 +11,28 @@
         <!--View Controller-->
         <scene sceneID="vC9-Zc-p8d">
             <objects>
-                <viewController id="9kD-Og-xbU" customClass="ViewController" customModule="NoteTakingWithUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9kD-Og-xbU" customClass="ViewController" customModule="Note_WithUIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xxb-1M-9g9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbG-ce-hhj">
+                                <rect key="frame" x="10" y="400" width="373" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="bGs-Rf-Q2F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gfb-Me-BsA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gfb-Me-BsA" firstAttribute="trailing" secondItem="EbG-ce-hhj" secondAttribute="trailing" constant="10" id="2Uv-VW-PHC"/>
+                            <constraint firstItem="EbG-ce-hhj" firstAttribute="leading" secondItem="gfb-Me-BsA" secondAttribute="leading" constant="10" id="YuK-Bg-7aZ"/>
+                            <constraint firstItem="EbG-ce-hhj" firstAttribute="top" secondItem="gfb-Me-BsA" secondAttribute="top" constant="341" id="uHw-QJ-mKL"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R8B-bD-Rlm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

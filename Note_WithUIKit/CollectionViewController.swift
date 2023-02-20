@@ -7,15 +7,7 @@
 
 import UIKit
 
-enum NoteType: String, CaseIterable, Identifiable {
-    var id: Self {
-        return self
-    }
-    case allNotes = "All Notes"
-    case audioNote = "Audio"
-    case reminderNote = "Reminder"
-    case imageNote = "Image"
-}
+
 
 private let collectionViewCellID = "NoteType_CollectionViewCell"
 
@@ -58,12 +50,12 @@ class CollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return 5
-    }
+        return NoteType.allCases.count
+            }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionViewCellID, for: indexPath) as! NoteType_CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionViewCellID, for: indexPath) as! NoteTypeCollectionViewCell
+        cell.cellButton.titleLabel?.text = NoteType.allCases[indexPath.item].rawValue
         return cell
     }
 

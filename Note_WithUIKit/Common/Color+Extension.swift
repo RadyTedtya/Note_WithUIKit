@@ -11,6 +11,7 @@ import UIKit
 extension UIColor {
     
     static let primaryColor = UIColor.init(hex: 0xF1F1F1)
+    static let secondaryColor = UIColor.init(hex: 0x6273ED)
     
     
     static let primaryBackgroundColor = UIColor.init(hex: 0xFBFCFF)

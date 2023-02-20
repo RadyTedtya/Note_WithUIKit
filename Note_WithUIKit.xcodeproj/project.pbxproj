@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D336FA3029A071A400200E36 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336FA2F29A071A400200E36 /* Color+Extension.swift */; };
-		D336FA3329A0822A00200E36 /* Reminder_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336FA3129A0822A00200E36 /* Reminder_TableViewCell.swift */; };
-		D336FA3429A0822A00200E36 /* Reminder_TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D336FA3229A0822A00200E36 /* Reminder_TableViewCell.xib */; };
+		D336FA3329A0822A00200E36 /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336FA3129A0822A00200E36 /* ReminderTableViewCell.swift */; };
+		D336FA3429A0822A00200E36 /* ReminderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D336FA3229A0822A00200E36 /* ReminderTableViewCell.xib */; };
 		D336FA3B29A093EE00200E36 /* AudioNote_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336FA3929A093EE00200E36 /* AudioNote_TableViewCell.swift */; };
 		D336FA3C29A093EE00200E36 /* AudioNote_TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D336FA3A29A093EE00200E36 /* AudioNote_TableViewCell.xib */; };
 		D37256B4299FA1170056AD28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37256B3299FA1170056AD28 /* AppDelegate.swift */; };
@@ -24,15 +24,21 @@
 		D37256EA299FA5370056AD28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D37256E9299FA5370056AD28 /* Main.storyboard */; };
 		D37256EF299FA55F0056AD28 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37256ED299FA55F0056AD28 /* HomeViewController.swift */; };
 		D37256F0299FA55F0056AD28 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D37256EE299FA55F0056AD28 /* HomeViewController.xib */; };
-		D37256F3299FA9050056AD28 /* ImageNote_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37256F1299FA9050056AD28 /* ImageNote_TableViewCell.swift */; };
-		D37256F4299FA9050056AD28 /* ImageNote_TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D37256F2299FA9050056AD28 /* ImageNote_TableViewCell.xib */; };
+		D37256F3299FA9050056AD28 /* ImageNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37256F1299FA9050056AD28 /* ImageNoteTableViewCell.swift */; };
+		D37256F4299FA9050056AD28 /* ImageNoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D37256F2299FA9050056AD28 /* ImageNoteTableViewCell.xib */; };
 		D37471F629A3001800A16F50 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37471F529A3001800A16F50 /* Note.swift */; };
+		D37471F829A3078900A16F50 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37471F729A3078900A16F50 /* UITableViewCell+Extension.swift */; };
+		D37471FA29A3081600A16F50 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37471F929A3081600A16F50 /* UITableView+Extension.swift */; };
+		D37471FD29A3212100A16F50 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37471FB29A3212100A16F50 /* NewNoteViewController.swift */; };
+		D37471FE29A3212100A16F50 /* NewNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D37471FC29A3212100A16F50 /* NewNoteViewController.xib */; };
+		D374720029A36DC100A16F50 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37471FF29A36DC100A16F50 /* UICollectionView+Extension.swift */; };
+		D374720229A36FD200A16F50 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D374720129A36FD200A16F50 /* UICollectionViewCell+Extension.swift */; };
 		D3E238C829A1CB72004E962B /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E238C729A1CB72004E962B /* TestView.xib */; };
 		D3E238CA29A1CB82004E962B /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238C929A1CB82004E962B /* TestView.swift */; };
-		D3E238D329A1D164004E962B /* NoteType_CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238D129A1D164004E962B /* NoteType_CollectionViewCell.swift */; };
-		D3E238D429A1D164004E962B /* NoteType_CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E238D229A1D164004E962B /* NoteType_CollectionViewCell.xib */; };
+		D3E238D329A1D164004E962B /* NoteTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238D129A1D164004E962B /* NoteTypeCollectionViewCell.swift */; };
+		D3E238D429A1D164004E962B /* NoteTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E238D229A1D164004E962B /* NoteTypeCollectionViewCell.xib */; };
 		D3E238D629A1D5D5004E962B /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238D529A1D5D5004E962B /* CollectionViewController.swift */; };
-		D3E238D829A1DE58004E962B /* NoteType_CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238D729A1DE58004E962B /* NoteType_CollectionViewController.swift */; };
+		D3E238D829A1DE58004E962B /* NoteTypeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238D729A1DE58004E962B /* NoteTypeCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +60,8 @@
 
 /* Begin PBXFileReference section */
 		D336FA2F29A071A400200E36 /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
-		D336FA3129A0822A00200E36 /* Reminder_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder_TableViewCell.swift; sourceTree = "<group>"; };
-		D336FA3229A0822A00200E36 /* Reminder_TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Reminder_TableViewCell.xib; sourceTree = "<group>"; };
+		D336FA3129A0822A00200E36 /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
+		D336FA3229A0822A00200E36 /* ReminderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReminderTableViewCell.xib; sourceTree = "<group>"; };
 		D336FA3929A093EE00200E36 /* AudioNote_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioNote_TableViewCell.swift; sourceTree = "<group>"; };
 		D336FA3A29A093EE00200E36 /* AudioNote_TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioNote_TableViewCell.xib; sourceTree = "<group>"; };
 		D37256B0299FA1170056AD28 /* Note_WithUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Note_WithUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,15 +80,21 @@
 		D37256E9299FA5370056AD28 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D37256ED299FA55F0056AD28 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D37256EE299FA55F0056AD28 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		D37256F1299FA9050056AD28 /* ImageNote_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNote_TableViewCell.swift; sourceTree = "<group>"; };
-		D37256F2299FA9050056AD28 /* ImageNote_TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageNote_TableViewCell.xib; sourceTree = "<group>"; };
+		D37256F1299FA9050056AD28 /* ImageNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNoteTableViewCell.swift; sourceTree = "<group>"; };
+		D37256F2299FA9050056AD28 /* ImageNoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageNoteTableViewCell.xib; sourceTree = "<group>"; };
 		D37471F529A3001800A16F50 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		D37471F729A3078900A16F50 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		D37471F929A3081600A16F50 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		D37471FB29A3212100A16F50 /* NewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
+		D37471FC29A3212100A16F50 /* NewNoteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewNoteViewController.xib; sourceTree = "<group>"; };
+		D37471FF29A36DC100A16F50 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		D374720129A36FD200A16F50 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		D3E238C729A1CB72004E962B /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		D3E238C929A1CB82004E962B /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
-		D3E238D129A1D164004E962B /* NoteType_CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteType_CollectionViewCell.swift; sourceTree = "<group>"; };
-		D3E238D229A1D164004E962B /* NoteType_CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteType_CollectionViewCell.xib; sourceTree = "<group>"; };
+		D3E238D129A1D164004E962B /* NoteTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		D3E238D229A1D164004E962B /* NoteTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTypeCollectionViewCell.xib; sourceTree = "<group>"; };
 		D3E238D529A1D5D5004E962B /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
-		D3E238D729A1DE58004E962B /* NoteType_CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteType_CollectionViewController.swift; sourceTree = "<group>"; };
+		D3E238D729A1DE58004E962B /* NoteTypeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTypeCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,17 +155,19 @@
 				D37256E4299FA47E0056AD28 /* WelcomeViewController.xib */,
 				D37471F529A3001800A16F50 /* Note.swift */,
 				D3E238D529A1D5D5004E962B /* CollectionViewController.swift */,
-				D3E238D729A1DE58004E962B /* NoteType_CollectionViewController.swift */,
-				D3E238D129A1D164004E962B /* NoteType_CollectionViewCell.swift */,
-				D3E238D229A1D164004E962B /* NoteType_CollectionViewCell.xib */,
+				D3E238D729A1DE58004E962B /* NoteTypeCollectionViewController.swift */,
+				D3E238D129A1D164004E962B /* NoteTypeCollectionViewCell.swift */,
+				D3E238D229A1D164004E962B /* NoteTypeCollectionViewCell.xib */,
 				D37256ED299FA55F0056AD28 /* HomeViewController.swift */,
 				D37256EE299FA55F0056AD28 /* HomeViewController.xib */,
 				D336FA3929A093EE00200E36 /* AudioNote_TableViewCell.swift */,
 				D336FA3A29A093EE00200E36 /* AudioNote_TableViewCell.xib */,
-				D37256F1299FA9050056AD28 /* ImageNote_TableViewCell.swift */,
-				D37256F2299FA9050056AD28 /* ImageNote_TableViewCell.xib */,
-				D336FA3129A0822A00200E36 /* Reminder_TableViewCell.swift */,
-				D336FA3229A0822A00200E36 /* Reminder_TableViewCell.xib */,
+				D37256F1299FA9050056AD28 /* ImageNoteTableViewCell.swift */,
+				D37471FB29A3212100A16F50 /* NewNoteViewController.swift */,
+				D37471FC29A3212100A16F50 /* NewNoteViewController.xib */,
+				D37256F2299FA9050056AD28 /* ImageNoteTableViewCell.xib */,
+				D336FA3129A0822A00200E36 /* ReminderTableViewCell.swift */,
+				D336FA3229A0822A00200E36 /* ReminderTableViewCell.xib */,
 				D37256E9299FA5370056AD28 /* Main.storyboard */,
 				D37256BC299FA1180056AD28 /* Assets.xcassets */,
 				D37256C1299FA1180056AD28 /* Info.plist */,
@@ -182,6 +196,10 @@
 			isa = PBXGroup;
 			children = (
 				D336FA2F29A071A400200E36 /* Color+Extension.swift */,
+				D37471F729A3078900A16F50 /* UITableViewCell+Extension.swift */,
+				D37471F929A3081600A16F50 /* UITableView+Extension.swift */,
+				D374720129A36FD200A16F50 /* UICollectionViewCell+Extension.swift */,
+				D37471FF29A36DC100A16F50 /* UICollectionView+Extension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -293,12 +311,13 @@
 				D3E238C829A1CB72004E962B /* TestView.xib in Resources */,
 				D37256EA299FA5370056AD28 /* Main.storyboard in Resources */,
 				D336FA3C29A093EE00200E36 /* AudioNote_TableViewCell.xib in Resources */,
-				D3E238D429A1D164004E962B /* NoteType_CollectionViewCell.xib in Resources */,
-				D37256F4299FA9050056AD28 /* ImageNote_TableViewCell.xib in Resources */,
+				D3E238D429A1D164004E962B /* NoteTypeCollectionViewCell.xib in Resources */,
+				D37256F4299FA9050056AD28 /* ImageNoteTableViewCell.xib in Resources */,
 				D37256E6299FA47E0056AD28 /* WelcomeViewController.xib in Resources */,
 				D37256BD299FA1180056AD28 /* Assets.xcassets in Resources */,
 				D37256F0299FA55F0056AD28 /* HomeViewController.xib in Resources */,
-				D336FA3429A0822A00200E36 /* Reminder_TableViewCell.xib in Resources */,
+				D336FA3429A0822A00200E36 /* ReminderTableViewCell.xib in Resources */,
+				D37471FE29A3212100A16F50 /* NewNoteViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,20 +342,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D374720029A36DC100A16F50 /* UICollectionView+Extension.swift in Sources */,
 				D3E238D629A1D5D5004E962B /* CollectionViewController.swift in Sources */,
+				D37471F829A3078900A16F50 /* UITableViewCell+Extension.swift in Sources */,
 				D37256EF299FA55F0056AD28 /* HomeViewController.swift in Sources */,
-				D3E238D829A1DE58004E962B /* NoteType_CollectionViewController.swift in Sources */,
+				D3E238D829A1DE58004E962B /* NoteTypeCollectionViewController.swift in Sources */,
 				D336FA3029A071A400200E36 /* Color+Extension.swift in Sources */,
-				D37256F3299FA9050056AD28 /* ImageNote_TableViewCell.swift in Sources */,
+				D37256F3299FA9050056AD28 /* ImageNoteTableViewCell.swift in Sources */,
 				D37256B8299FA1170056AD28 /* ViewController.swift in Sources */,
 				D37256E5299FA47E0056AD28 /* WelcomeViewController.swift in Sources */,
-				D3E238D329A1D164004E962B /* NoteType_CollectionViewCell.swift in Sources */,
+				D37471FD29A3212100A16F50 /* NewNoteViewController.swift in Sources */,
+				D3E238D329A1D164004E962B /* NoteTypeCollectionViewCell.swift in Sources */,
 				D37256B4299FA1170056AD28 /* AppDelegate.swift in Sources */,
 				D37471F629A3001800A16F50 /* Note.swift in Sources */,
 				D3E238CA29A1CB82004E962B /* TestView.swift in Sources */,
 				D336FA3B29A093EE00200E36 /* AudioNote_TableViewCell.swift in Sources */,
 				D37256B6299FA1170056AD28 /* SceneDelegate.swift in Sources */,
-				D336FA3329A0822A00200E36 /* Reminder_TableViewCell.swift in Sources */,
+				D374720229A36FD200A16F50 /* UICollectionViewCell+Extension.swift in Sources */,
+				D336FA3329A0822A00200E36 /* ReminderTableViewCell.swift in Sources */,
+				D37471FA29A3081600A16F50 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

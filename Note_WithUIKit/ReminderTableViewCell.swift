@@ -7,7 +7,9 @@
 
 import UIKit
 
-class Reminder_TableViewCell: UITableViewCell {
+class ReminderTableViewCell: UITableViewCell {
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
