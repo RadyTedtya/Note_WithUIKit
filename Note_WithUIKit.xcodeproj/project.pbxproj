@@ -26,6 +26,7 @@
 		D37256F0299FA55F0056AD28 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D37256EE299FA55F0056AD28 /* HomeViewController.xib */; };
 		D37256F3299FA9050056AD28 /* ImageNote_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37256F1299FA9050056AD28 /* ImageNote_TableViewCell.swift */; };
 		D37256F4299FA9050056AD28 /* ImageNote_TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D37256F2299FA9050056AD28 /* ImageNote_TableViewCell.xib */; };
+		D37471F629A3001800A16F50 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37471F529A3001800A16F50 /* Note.swift */; };
 		D3E238C829A1CB72004E962B /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E238C729A1CB72004E962B /* TestView.xib */; };
 		D3E238CA29A1CB82004E962B /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238C929A1CB82004E962B /* TestView.swift */; };
 		D3E238D329A1D164004E962B /* NoteType_CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238D129A1D164004E962B /* NoteType_CollectionViewCell.swift */; };
@@ -75,6 +76,7 @@
 		D37256EE299FA55F0056AD28 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		D37256F1299FA9050056AD28 /* ImageNote_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNote_TableViewCell.swift; sourceTree = "<group>"; };
 		D37256F2299FA9050056AD28 /* ImageNote_TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageNote_TableViewCell.xib; sourceTree = "<group>"; };
+		D37471F529A3001800A16F50 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		D3E238C729A1CB72004E962B /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		D3E238C929A1CB82004E962B /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		D3E238D129A1D164004E962B /* NoteType_CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteType_CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				D3E238C729A1CB72004E962B /* TestView.xib */,
 				D37256E3299FA47E0056AD28 /* WelcomeViewController.swift */,
 				D37256E4299FA47E0056AD28 /* WelcomeViewController.xib */,
+				D37471F529A3001800A16F50 /* Note.swift */,
 				D3E238D529A1D5D5004E962B /* CollectionViewController.swift */,
 				D3E238D729A1DE58004E962B /* NoteType_CollectionViewController.swift */,
 				D3E238D129A1D164004E962B /* NoteType_CollectionViewCell.swift */,
@@ -329,6 +332,7 @@
 				D37256E5299FA47E0056AD28 /* WelcomeViewController.swift in Sources */,
 				D3E238D329A1D164004E962B /* NoteType_CollectionViewCell.swift in Sources */,
 				D37256B4299FA1170056AD28 /* AppDelegate.swift in Sources */,
+				D37471F629A3001800A16F50 /* Note.swift in Sources */,
 				D3E238CA29A1CB82004E962B /* TestView.swift in Sources */,
 				D336FA3B29A093EE00200E36 /* AudioNote_TableViewCell.swift in Sources */,
 				D37256B6299FA1170056AD28 /* SceneDelegate.swift in Sources */,
