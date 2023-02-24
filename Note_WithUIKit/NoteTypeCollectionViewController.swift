@@ -14,7 +14,7 @@ class NoteTypeCollectionViewController: UIViewController {
     let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
     
     private lazy var _collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout.init())
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -32,17 +32,15 @@ class NoteTypeCollectionViewController: UIViewController {
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         _collectionView.register(UINib(nibName: "NoteTypeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cv_CellID)
         _collectionView.register(NoteTypeCollectionViewCell.self)
+        view.addSubview(_collectionView)
         NSLayoutConstraint.activate([
             _collectionView.topAnchor.constraint(equalTo: view.topAnchor),
             _collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             _collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             _collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
-        view.addSubview(_collectionView)
-        _collectionView.backgroundColor = .black
     }
-    
-    
+
 }
 
 extension NoteTypeCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -58,9 +56,10 @@ extension NoteTypeCollectionViewController: UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeue(NoteTypeCollectionViewCell.self, for: indexPath)
         cell.awakeFromNib()
-        cell.cellButton.titleLabel?.text = NoteType.allCases[indexPath.item].rawValue
+        cell.cellButton.setTitle(String(NoteType.allCases[indexPath.item].rawValue), for: .normal)
         return cell
     }
+    
     
     
 }

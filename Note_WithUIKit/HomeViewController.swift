@@ -38,8 +38,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
-        cell.backgroundColor = .primaryBackgroundColor
-        return cell.configureCell(cell: cell, cellIndex: indexPath.row)
+        cell.descriptionLabel.text = Note.dummyReminderNote.description
+        cell.backgroundColor = .white
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,15 +56,18 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView(frame: .init(x: 0, y: 0, width: view.frame.width, height: 80))
-        headerView.addSubview(collectionView.view)
-        return headerView
+        let scrollView = UIScrollView(frame: .init(x: 0, y: 0, width: 100, height: 55))
+        scrollView.addSubview(collectionView.view)
+        scrollView.isPagingEnabled = true
+        scrollView.isScrollEnabled = true
+        scrollView.backgroundColor = .red
+        return scrollView
+        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 80
+        return 55
     }
-    
  
     
     

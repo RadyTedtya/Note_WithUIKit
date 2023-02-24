@@ -33,11 +33,8 @@
 		D37471FE29A3212100A16F50 /* NewNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D37471FC29A3212100A16F50 /* NewNoteViewController.xib */; };
 		D374720029A36DC100A16F50 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37471FF29A36DC100A16F50 /* UICollectionView+Extension.swift */; };
 		D374720229A36FD200A16F50 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D374720129A36FD200A16F50 /* UICollectionViewCell+Extension.swift */; };
-		D3E238C829A1CB72004E962B /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E238C729A1CB72004E962B /* TestView.xib */; };
-		D3E238CA29A1CB82004E962B /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238C929A1CB82004E962B /* TestView.swift */; };
 		D3E238D329A1D164004E962B /* NoteTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238D129A1D164004E962B /* NoteTypeCollectionViewCell.swift */; };
 		D3E238D429A1D164004E962B /* NoteTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E238D229A1D164004E962B /* NoteTypeCollectionViewCell.xib */; };
-		D3E238D629A1D5D5004E962B /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238D529A1D5D5004E962B /* CollectionViewController.swift */; };
 		D3E238D829A1DE58004E962B /* NoteTypeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238D729A1DE58004E962B /* NoteTypeCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,11 +86,8 @@
 		D37471FC29A3212100A16F50 /* NewNoteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewNoteViewController.xib; sourceTree = "<group>"; };
 		D37471FF29A36DC100A16F50 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		D374720129A36FD200A16F50 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
-		D3E238C729A1CB72004E962B /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
-		D3E238C929A1CB82004E962B /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		D3E238D129A1D164004E962B /* NoteTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		D3E238D229A1D164004E962B /* NoteTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTypeCollectionViewCell.xib; sourceTree = "<group>"; };
-		D3E238D529A1D5D5004E962B /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		D3E238D729A1DE58004E962B /* NoteTypeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTypeCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,12 +143,9 @@
 				D37256B3299FA1170056AD28 /* AppDelegate.swift */,
 				D37256B5299FA1170056AD28 /* SceneDelegate.swift */,
 				D37256B7299FA1170056AD28 /* ViewController.swift */,
-				D3E238C929A1CB82004E962B /* TestView.swift */,
-				D3E238C729A1CB72004E962B /* TestView.xib */,
 				D37256E3299FA47E0056AD28 /* WelcomeViewController.swift */,
 				D37256E4299FA47E0056AD28 /* WelcomeViewController.xib */,
 				D37471F529A3001800A16F50 /* Note.swift */,
-				D3E238D529A1D5D5004E962B /* CollectionViewController.swift */,
 				D3E238D729A1DE58004E962B /* NoteTypeCollectionViewController.swift */,
 				D3E238D129A1D164004E962B /* NoteTypeCollectionViewCell.swift */,
 				D3E238D229A1D164004E962B /* NoteTypeCollectionViewCell.xib */,
@@ -163,9 +154,9 @@
 				D336FA3929A093EE00200E36 /* AudioNote_TableViewCell.swift */,
 				D336FA3A29A093EE00200E36 /* AudioNote_TableViewCell.xib */,
 				D37256F1299FA9050056AD28 /* ImageNoteTableViewCell.swift */,
+				D37256F2299FA9050056AD28 /* ImageNoteTableViewCell.xib */,
 				D37471FB29A3212100A16F50 /* NewNoteViewController.swift */,
 				D37471FC29A3212100A16F50 /* NewNoteViewController.xib */,
-				D37256F2299FA9050056AD28 /* ImageNoteTableViewCell.xib */,
 				D336FA3129A0822A00200E36 /* ReminderTableViewCell.swift */,
 				D336FA3229A0822A00200E36 /* ReminderTableViewCell.xib */,
 				D37256E9299FA5370056AD28 /* Main.storyboard */,
@@ -308,7 +299,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3E238C829A1CB72004E962B /* TestView.xib in Resources */,
 				D37256EA299FA5370056AD28 /* Main.storyboard in Resources */,
 				D336FA3C29A093EE00200E36 /* AudioNote_TableViewCell.xib in Resources */,
 				D3E238D429A1D164004E962B /* NoteTypeCollectionViewCell.xib in Resources */,
@@ -343,7 +333,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D374720029A36DC100A16F50 /* UICollectionView+Extension.swift in Sources */,
-				D3E238D629A1D5D5004E962B /* CollectionViewController.swift in Sources */,
 				D37471F829A3078900A16F50 /* UITableViewCell+Extension.swift in Sources */,
 				D37256EF299FA55F0056AD28 /* HomeViewController.swift in Sources */,
 				D3E238D829A1DE58004E962B /* NoteTypeCollectionViewController.swift in Sources */,
@@ -355,7 +344,6 @@
 				D3E238D329A1D164004E962B /* NoteTypeCollectionViewCell.swift in Sources */,
 				D37256B4299FA1170056AD28 /* AppDelegate.swift in Sources */,
 				D37471F629A3001800A16F50 /* Note.swift in Sources */,
-				D3E238CA29A1CB82004E962B /* TestView.swift in Sources */,
 				D336FA3B29A093EE00200E36 /* AudioNote_TableViewCell.swift in Sources */,
 				D37256B6299FA1170056AD28 /* SceneDelegate.swift in Sources */,
 				D374720229A36FD200A16F50 /* UICollectionViewCell+Extension.swift in Sources */,

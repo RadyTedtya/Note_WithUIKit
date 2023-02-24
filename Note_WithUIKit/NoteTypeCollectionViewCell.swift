@@ -14,7 +14,6 @@ class NoteTypeCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-//        cellButton.tintColor = .secondaryColor
     }
-
+    
 }

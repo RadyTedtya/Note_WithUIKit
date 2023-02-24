@@ -23,19 +23,33 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mg-EL-7Cd">
+                    <rect key="frame" x="228" y="713" width="130" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="130" id="Y47-Je-HTA"/>
+                        <constraint firstAttribute="height" constant="60" id="nEJ-Wm-98C"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" title="  Create" cornerStyle="capsule" buttonSize="large">
+                        <color key="baseBackgroundColor" red="0.38431372549999998" green="0.45098039220000002" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </buttonConfiguration>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6mg-EL-7Cd" secondAttribute="bottom" constant="45" id="7Y8-l6-SuZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9ud-bH-gnZ" secondAttribute="bottom" id="7qK-C7-Uwr"/>
                 <constraint firstItem="9ud-bH-gnZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="PxS-Lq-b7G"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9ud-bH-gnZ" secondAttribute="trailing" id="SAm-JD-87G"/>
                 <constraint firstItem="9ud-bH-gnZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="X5e-Bf-TY4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6mg-EL-7Cd" secondAttribute="trailing" constant="35" id="XdY-1j-tQ1"/>
             </constraints>
-            <point key="canvasLocation" x="138" y="20"/>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
