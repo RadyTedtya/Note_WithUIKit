@@ -9,11 +9,26 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
-
+    
+    func setup() {
+        emailTextField.placeholder = "Email/Username"
+        passwordTextField.placeholder = "Password"
+        emailTextField.text = ""
+        passwordTextField.text = ""
+        
+    }
+    
+    @IBAction func loginButton(_ sender: Any) {
+        print("Login Clicked")
+    }
+    
 
 }
