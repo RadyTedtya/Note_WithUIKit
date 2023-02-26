@@ -70,10 +70,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        //        let segmentView = UIView(frame: .init(x: 0, y: 0, width: CGRectGetWidth(view.frame), height: CGRectGetHeight(view.frame)))
-        let segmentView = UIView(frame: .zero)
-        segmentView.addSubview(segmentedControll)
-        return segmentView
+//        let segmentView = UIView(frame: .zero)
+//        segmentView.addSubview(segmentedControll)
+//        return segmentView
+        
+        let cv = UIView(frame: .init(x: 0, y: 0, width: view.frame.width, height: 55))
+//        cv.addSubview(collectionView)
+        return cv
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
