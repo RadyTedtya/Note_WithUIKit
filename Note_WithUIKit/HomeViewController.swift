@@ -8,30 +8,43 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     let searchController: UISearchController! = .init()
     let collectionView: NoteTypeCollectionViewController = .init()
+    
+    let segmentedControll: UISegmentedControl = {
+        let noteType: [String] = NoteType.allCases.map { $0.rawValue }
+        let sc = UISegmentedControl(items: noteType)
+        return sc
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }
-
+    
     func setup() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: self, action: #selector(nextScreen))
+        title = "Home View"
+        searchController.searchBar.barTintColor = .primaryBackgroundColor
+        segmentedControll.selectedSegmentIndex = 0
+        segmentedControll.tintColor = .primaryColor
+        segmentedControll.translatesAutoresizingMaskIntoConstraints = true
+        segmentedControll.backgroundColor = .lightGray
         tableView.register(ImageNoteTableViewCell.self)
         tableView.dataSource = self
         tableView.delegate = self
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: self, action: #selector(nextScreen))
-        title = "Home View"
         tableView.tableHeaderView = searchController.searchBar
-        searchController.searchBar.barTintColor = .primaryBackgroundColor
+        
     }
+    
+    
     
     @objc func nextScreen() {
         print("Profile Clicked")
     }
-
+    
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
@@ -56,19 +69,16 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let scrollView = UIScrollView(frame: .init(x: 0, y: 0, width: 100, height: 55))
-        scrollView.addSubview(collectionView.view)
-        scrollView.isPagingEnabled = true
-        scrollView.isScrollEnabled = true
-        scrollView.backgroundColor = .red
-        return scrollView
-        
+        //        let segmentView = UIView(frame: .init(x: 0, y: 0, width: CGRectGetWidth(view.frame), height: CGRectGetHeight(view.frame)))
+        let segmentView = UIView(frame: .zero)
+        segmentView.addSubview(segmentedControll)
+        return segmentView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 55
     }
- 
+    
     
     
     

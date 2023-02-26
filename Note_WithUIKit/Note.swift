@@ -8,6 +8,7 @@
 import Foundation
 
 enum NoteType: String, CaseIterable, Identifiable {
+    
     var id: Self {
         return self
     }
