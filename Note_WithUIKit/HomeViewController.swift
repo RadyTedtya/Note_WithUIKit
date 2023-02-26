@@ -39,10 +39,11 @@ class HomeViewController: UIViewController {
         
     }
     
-    
-    
     @objc func nextScreen() {
-        print("Profile Clicked")
+        let loginViewController = UINavigationController(rootViewController: LoginViewController())
+        loginViewController.modalPresentationStyle = .fullScreen
+        loginViewController.navigationBar.backgroundColor = .primaryBackgroundColor
+        self.present(loginViewController, animated: true)
     }
     
 }
