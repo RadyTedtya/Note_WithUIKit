@@ -12,6 +12,12 @@
 		D336FA3429A0822A00200E36 /* ReminderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D336FA3229A0822A00200E36 /* ReminderTableViewCell.xib */; };
 		D336FA3B29A093EE00200E36 /* AudioNote_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336FA3929A093EE00200E36 /* AudioNote_TableViewCell.swift */; };
 		D336FA3C29A093EE00200E36 /* AudioNote_TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D336FA3A29A093EE00200E36 /* AudioNote_TableViewCell.xib */; };
+		D354E3AF29AB28DF00D62A60 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D354E3AE29AB28DF00D62A60 /* FirebaseDatabase */; };
+		D354E3B129AB28DF00D62A60 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D354E3B029AB28DF00D62A60 /* FirebaseDatabaseSwift */; };
+		D354E3B329AB28DF00D62A60 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D354E3B229AB28DF00D62A60 /* FirebaseFirestore */; };
+		D354E3B529AB292500D62A60 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354E3B429AB292500D62A60 /* LoginViewModel.swift */; };
+		D354E3B729AB298B00D62A60 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354E3B629AB298B00D62A60 /* User.swift */; };
+		D354E3BB29AB5B8800D62A60 /* NoteTypeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354E3BA29AB5B8800D62A60 /* NoteTypeHeaderView.swift */; };
 		D37256B4299FA1170056AD28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37256B3299FA1170056AD28 /* AppDelegate.swift */; };
 		D37256B6299FA1170056AD28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37256B5299FA1170056AD28 /* SceneDelegate.swift */; };
 		D37256B8299FA1170056AD28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37256B7299FA1170056AD28 /* ViewController.swift */; };
@@ -39,7 +45,6 @@
 		D379ED0529A88B5900E4DE26 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D379ED0329A88B5900E4DE26 /* RegisterViewController.xib */; };
 		D3E238D329A1D164004E962B /* NoteTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238D129A1D164004E962B /* NoteTypeCollectionViewCell.swift */; };
 		D3E238D429A1D164004E962B /* NoteTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E238D229A1D164004E962B /* NoteTypeCollectionViewCell.xib */; };
-		D3E238D829A1DE58004E962B /* NoteTypeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238D729A1DE58004E962B /* NoteTypeCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +70,9 @@
 		D336FA3229A0822A00200E36 /* ReminderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReminderTableViewCell.xib; sourceTree = "<group>"; };
 		D336FA3929A093EE00200E36 /* AudioNote_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioNote_TableViewCell.swift; sourceTree = "<group>"; };
 		D336FA3A29A093EE00200E36 /* AudioNote_TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioNote_TableViewCell.xib; sourceTree = "<group>"; };
+		D354E3B429AB292500D62A60 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D354E3B629AB298B00D62A60 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D354E3BA29AB5B8800D62A60 /* NoteTypeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTypeHeaderView.swift; sourceTree = "<group>"; };
 		D37256B0299FA1170056AD28 /* Note_WithUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Note_WithUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D37256B3299FA1170056AD28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D37256B5299FA1170056AD28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,7 +104,6 @@
 		D379ED0329A88B5900E4DE26 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		D3E238D129A1D164004E962B /* NoteTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		D3E238D229A1D164004E962B /* NoteTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTypeCollectionViewCell.xib; sourceTree = "<group>"; };
-		D3E238D729A1DE58004E962B /* NoteTypeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTypeCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +111,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D354E3B129AB28DF00D62A60 /* FirebaseDatabaseSwift in Frameworks */,
+				D354E3AF29AB28DF00D62A60 /* FirebaseDatabase in Frameworks */,
+				D354E3B329AB28DF00D62A60 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,10 +161,12 @@
 				D37256B3299FA1170056AD28 /* AppDelegate.swift */,
 				D37256B5299FA1170056AD28 /* SceneDelegate.swift */,
 				D37256B7299FA1170056AD28 /* ViewController.swift */,
+				D354E3B629AB298B00D62A60 /* User.swift */,
+				D354E3B429AB292500D62A60 /* LoginViewModel.swift */,
 				D37256E3299FA47E0056AD28 /* WelcomeViewController.swift */,
 				D37256E4299FA47E0056AD28 /* WelcomeViewController.xib */,
 				D37471F529A3001800A16F50 /* Note.swift */,
-				D3E238D729A1DE58004E962B /* NoteTypeCollectionViewController.swift */,
+				D354E3BA29AB5B8800D62A60 /* NoteTypeHeaderView.swift */,
 				D3E238D129A1D164004E962B /* NoteTypeCollectionViewCell.swift */,
 				D3E238D229A1D164004E962B /* NoteTypeCollectionViewCell.xib */,
 				D37256ED299FA55F0056AD28 /* HomeViewController.swift */,
@@ -223,6 +235,11 @@
 			dependencies = (
 			);
 			name = Note_WithUIKit;
+			packageProductDependencies = (
+				D354E3AE29AB28DF00D62A60 /* FirebaseDatabase */,
+				D354E3B029AB28DF00D62A60 /* FirebaseDatabaseSwift */,
+				D354E3B229AB28DF00D62A60 /* FirebaseFirestore */,
+			);
 			productName = Note_WithUIKit;
 			productReference = D37256B0299FA1170056AD28 /* Note_WithUIKit.app */;
 			productType = "com.apple.product-type.application";
@@ -295,6 +312,9 @@
 				Base,
 			);
 			mainGroup = D37256A7299FA1170056AD28;
+			packageReferences = (
+				D354E3AD29AB28DF00D62A60 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = D37256B1299FA1170056AD28 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -351,20 +371,22 @@
 				D37471F829A3078900A16F50 /* UITableViewCell+Extension.swift in Sources */,
 				D37256EF299FA55F0056AD28 /* HomeViewController.swift in Sources */,
 				D379ED0429A88B5900E4DE26 /* RegisterViewController.swift in Sources */,
-				D3E238D829A1DE58004E962B /* NoteTypeCollectionViewController.swift in Sources */,
 				D336FA3029A071A400200E36 /* Color+Extension.swift in Sources */,
 				D37256F3299FA9050056AD28 /* ImageNoteTableViewCell.swift in Sources */,
+				D354E3B529AB292500D62A60 /* LoginViewModel.swift in Sources */,
 				D37256B8299FA1170056AD28 /* ViewController.swift in Sources */,
 				D37256E5299FA47E0056AD28 /* WelcomeViewController.swift in Sources */,
 				D37471FD29A3212100A16F50 /* NewNoteViewController.swift in Sources */,
 				D3E238D329A1D164004E962B /* NoteTypeCollectionViewCell.swift in Sources */,
 				D37256B4299FA1170056AD28 /* AppDelegate.swift in Sources */,
 				D37471F629A3001800A16F50 /* Note.swift in Sources */,
+				D354E3BB29AB5B8800D62A60 /* NoteTypeHeaderView.swift in Sources */,
 				D336FA3B29A093EE00200E36 /* AudioNote_TableViewCell.swift in Sources */,
 				D37256B6299FA1170056AD28 /* SceneDelegate.swift in Sources */,
 				D374720229A36FD200A16F50 /* UICollectionViewCell+Extension.swift in Sources */,
 				D336FA3329A0822A00200E36 /* ReminderTableViewCell.swift in Sources */,
 				D37471FA29A3081600A16F50 /* UITableView+Extension.swift in Sources */,
+				D354E3B729AB298B00D62A60 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,6 +707,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D354E3AD29AB28DF00D62A60 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D354E3AE29AB28DF00D62A60 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D354E3AD29AB28DF00D62A60 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		D354E3B029AB28DF00D62A60 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D354E3AD29AB28DF00D62A60 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		D354E3B229AB28DF00D62A60 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D354E3AD29AB28DF00D62A60 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D37256A8299FA1170056AD28 /* Project object */;
 }
