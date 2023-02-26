@@ -9,14 +9,13 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    private let _sectionHeight: CGFloat = 80
+    
     @IBOutlet weak var tableView: UITableView!
     let searchController: UISearchController! = .init()
-    let collectionView: NoteTypeCollectionViewController = .init()
     
-    let segmentedControll: UISegmentedControl = {
-        let noteType: [String] = NoteType.allCases.map { $0.rawValue }
-        let sc = UISegmentedControl(items: noteType)
-        return sc
+    private lazy var noteTypeHeaderView: NoteTypeHeaderView = {
+        .init(frame: .init(x: 0, y: 0, width: view.frame.width, height: _sectionHeight))
     }()
     
     override func viewDidLoad() {
@@ -28,10 +27,6 @@ class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: self, action: #selector(nextScreen))
         title = "Home View"
         searchController.searchBar.barTintColor = .primaryBackgroundColor
-        segmentedControll.selectedSegmentIndex = 0
-        segmentedControll.tintColor = .primaryColor
-        segmentedControll.translatesAutoresizingMaskIntoConstraints = true
-        segmentedControll.backgroundColor = .lightGray
         tableView.register(ImageNoteTableViewCell.self)
         tableView.dataSource = self
         tableView.delegate = self
@@ -70,20 +65,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let segmentView = UIView(frame: .zero)
-//        segmentView.addSubview(segmentedControll)
-//        return segmentView
-        
-        let cv = UIView(frame: .init(x: 0, y: 0, width: view.frame.width, height: 55))
-//        cv.addSubview(collectionView)
-        return cv
+        return noteTypeHeaderView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 55
     }
-    
-    
-    
     
 }
