@@ -31,4 +31,9 @@ class LoginViewController: UIViewController {
     }
     
 
+    @IBAction func registerButton(_ sender: Any) {
+        let registerViewController = UIViewController(nibName: "RegisterViewController", bundle: nil)
+        registerViewController.modalPresentationStyle = .fullScreen
+        self.present(registerViewController, animated: true)
+    }
 }

@@ -40,4 +40,9 @@ class LoginViewModel {
         }
     }
     
+    //Add new user
+    func addNewUser() {
+        
+    }
+    
 }

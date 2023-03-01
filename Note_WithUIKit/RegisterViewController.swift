@@ -15,6 +15,8 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var loginViewModel: LoginViewModel = .init()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +34,6 @@ class RegisterViewController: UIViewController {
     }
 
     @IBAction func registerButton(_ sender: Any) {
-        
+        loginViewModel.addNewDocument()
     }
 }

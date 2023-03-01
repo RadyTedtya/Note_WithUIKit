@@ -52,6 +52,17 @@
                         <action selector="loginButton:" destination="-1" eventType="touchUpInside" id="YvU-BE-5DM"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0et-f9-03d">
+                    <rect key="frame" x="286" y="560" width="87" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="bpg-Se-XCk"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Register"/>
+                    <connections>
+                        <action selector="registerButton:" destination="-1" eventType="touchUpInside" id="Oll-Ba-1ZP"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -65,7 +76,10 @@
                 <constraint firstItem="Q3I-8M-jMm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="LN5-p8-iih"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="06m-Vm-JCw" secondAttribute="trailing" constant="130" id="Xcl-lQ-Yys"/>
                 <constraint firstItem="Q3I-8M-jMm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="280" id="aH6-oc-A9D"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0et-f9-03d" secondAttribute="trailing" constant="20" id="eWb-nA-i5T"/>
                 <constraint firstItem="06m-Vm-JCw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="130" id="evm-cv-0DP"/>
+                <constraint firstItem="0et-f9-03d" firstAttribute="leading" secondItem="06m-Vm-JCw" secondAttribute="trailing" constant="23" id="hN2-es-XXT"/>
+                <constraint firstItem="0et-f9-03d" firstAttribute="top" secondItem="xTa-ek-Lsk" secondAttribute="bottom" constant="32" id="kx2-wY-4xI"/>
                 <constraint firstItem="06m-Vm-JCw" firstAttribute="top" secondItem="xTa-ek-Lsk" secondAttribute="bottom" constant="30" id="lpy-Xt-oHj"/>
                 <constraint firstItem="cWY-JM-qGb" firstAttribute="top" secondItem="Q3I-8M-jMm" secondAttribute="bottom" constant="50" id="zOI-EI-5KH"/>
             </constraints>

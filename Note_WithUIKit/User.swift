@@ -12,4 +12,7 @@ struct User {
     let username: String!
     let password: String!
     let email: String!
+    
+    static let dummyUser = User.init(id: 1, username: "test", password: "test123", email: "test@gmail.com")
+    
 }
