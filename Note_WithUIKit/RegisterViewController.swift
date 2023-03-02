@@ -30,10 +30,19 @@ class RegisterViewController: UIViewController {
         emailTextField.text = ""
         usernameTextField.text = ""
         passwordTextField.text = ""
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .plain, target: self , action: #selector(dismissView))
+        title = "Registration"
         
     }
+    
+    @objc func dismissView() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
 
     @IBAction func registerButton(_ sender: Any) {
         loginViewModel.addNewDocument()
     }
+    
 }

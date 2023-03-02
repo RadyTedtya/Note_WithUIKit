@@ -24,21 +24,17 @@ class HomeViewController: UIViewController {
     }
     
     func setup() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: self, action: #selector(nextScreen))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: self, action: #selector(moveToLoginView))
         title = "Home View"
         searchController.searchBar.barTintColor = .primaryBackgroundColor
         tableView.register(ImageNoteTableViewCell.self)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableHeaderView = searchController.searchBar
-        
     }
     
-    @objc func nextScreen() {
-        let loginViewController = UINavigationController(rootViewController: LoginViewController())
-        loginViewController.modalPresentationStyle = .fullScreen
-        loginViewController.navigationBar.backgroundColor = .primaryBackgroundColor
-        self.present(loginViewController, animated: true)
+    @objc func moveToLoginView() {
+        navigationController?.pushViewController(LoginViewController(), animated: true)
     }
     
 }
