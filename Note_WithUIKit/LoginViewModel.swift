@@ -7,13 +7,12 @@
 
 import Foundation
 import UIKit
-import FirebaseCore
 import FirebaseFirestore
 
-class LoginViewModel {
+class LoginViewModel: ObservableObject {
+    
     
     var db: Firestore!
-    
     
     func firebaseSetup() {
         //[Start Firebase setup]

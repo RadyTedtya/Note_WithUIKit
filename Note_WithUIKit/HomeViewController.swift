@@ -8,11 +8,11 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
+
     private let _sectionHeight: CGFloat = 80
+    let searchController: UISearchController! = .init()
     
     @IBOutlet weak var tableView: UITableView!
-    let searchController: UISearchController! = .init()
     
     private lazy var noteTypeHeaderView: NoteTypeHeaderView = {
         .init(frame: .init(x: 0, y: 0, width: view.frame.width, height: _sectionHeight))
@@ -26,6 +26,7 @@ class HomeViewController: UIViewController {
     func setup() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: self, action: #selector(moveToLoginView))
         title = "Home View"
+        
         searchController.searchBar.barTintColor = .primaryBackgroundColor
         tableView.register(ImageNoteTableViewCell.self)
         tableView.dataSource = self

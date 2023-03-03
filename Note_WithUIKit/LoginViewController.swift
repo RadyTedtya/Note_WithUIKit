@@ -8,7 +8,8 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    var loginViewModel: LoginViewModel!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -34,6 +35,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: Any) {
         print("Login Clicked")
+        loginViewModel.addNewDocument()
     }
     
 
