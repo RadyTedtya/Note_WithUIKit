@@ -19,7 +19,8 @@ class NoteTypeHeaderView: UIView {
         collectionView.setCollectionViewLayout(layout, animated: true)
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         collectionView.register(NoteTypeCollectionViewCell.self)
-        collectionView.backgroundColor = .primaryColor
+//        collectionView.backgroundColor = .primaryColor
+        
         return collectionView
     }()
 
@@ -45,10 +46,7 @@ class NoteTypeHeaderView: UIView {
             _collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
             _collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             _collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            
         ])
-//        _collectionView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor).isActive = true
-//        _collectionView.centerYAnchor.constraint(equalTo: parentView.centerYAnchor).isActive = true
     }
     
 
@@ -68,9 +66,8 @@ extension NoteTypeHeaderView: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionView.dequeue(NoteTypeCollectionViewCell.self, for: indexPath)
         cell.awakeFromNib()
         cell.cellButton.setTitle(String(NoteType.allCases[indexPath.item].rawValue), for: .normal)
+        cell.isSelected = true
         return cell
     }
-    
-    
     
 }

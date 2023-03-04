@@ -11,9 +11,32 @@ class NoteTypeCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var cellButton: UIButton!
     
+    override var isSelected: Bool {
+        didSet {
+            if (isSelected) {
+                backgroundColor = .blue
+            } else {
+                backgroundColor = .primaryColor
+            }
+ //            backgroundColor = isSelected ? .blue : .primaryColor
+            
+            if isSelected {
+                cellButton.tintColor = .primaryBackgroundColor
+                cellButton.titleLabel?.tintColor = .red
+            }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setUpButton()
+        
+    }
+    
+    func setUpButton() {
+        cellButton.titleLabel?.tintColor = .red
+        
     }
     
 }

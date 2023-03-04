@@ -8,11 +8,14 @@
 import Foundation
 import UIKit
 import FirebaseFirestore
+import FirebaseAuth
 
 class LoginViewModel: ObservableObject {
     
-    
+    var loginResult: Bool = false
     var db: Firestore!
+    var handle: AuthStateDidChangeListenerHandle!
+    var user: User!
     
     func firebaseSetup() {
         //[Start Firebase setup]
@@ -21,7 +24,7 @@ class LoginViewModel: ObservableObject {
         //[End setup]
         db = Firestore.firestore()
     }
-
+    
     //Add new document with generated ID
     func addNewDocument() {
         var ref: DocumentReference? = nil
@@ -39,9 +42,29 @@ class LoginViewModel: ObservableObject {
         }
     }
     
-    //Add new user
-    func addNewUser() {
+    func loginUser(user: User) -> Bool {
         
+        Auth.auth().createUser(withEmail: user.email, password: user.password) { authResult, error in
+            if let error = error {
+                print("Error: \(error)")
+            } else {
+                self.loginResult = true
+            }
+        }
+        return loginResult
     }
+    
+    func signOutUser(user: User) -> Bool {
+        let firebaseAuth = Auth.auth()
+          do {
+            try firebaseAuth.signOut()
+              return loginResult == false
+          } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+              return loginResult == true
+          }
+    }
+    
+    
     
 }

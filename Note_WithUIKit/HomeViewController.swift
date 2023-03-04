@@ -3,7 +3,7 @@
 //  Note_WithUIKit
 //
 //  Created by Tedtya rady on 17/2/2023.
-//
+
 
 import UIKit
 
@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
 
     private let _sectionHeight: CGFloat = 80
     let searchController: UISearchController! = .init()
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,12 +22,12 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        
     }
     
     func setup() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: self, action: #selector(moveToLoginView))
         title = "Home View"
-        
         searchController.searchBar.barTintColor = .primaryBackgroundColor
         tableView.register(ImageNoteTableViewCell.self)
         tableView.dataSource = self
@@ -35,17 +36,24 @@ class HomeViewController: UIViewController {
     }
     
     @objc func moveToLoginView() {
-        navigationController?.pushViewController(LoginViewController(), animated: true)
+//        print((UIApplication.shared.delegate as! AppDelegate).isLogin)
+        print(String((UIApplication.shared.delegate as! AppDelegate).isLogin))
+        if (UIApplication.shared.delegate as! AppDelegate).isLogin {
+            navigationController?.pushViewController(SignOutViewController(), animated: true)
+        } else {
+            navigationController?.pushViewController(LoginViewController(), animated: true)
+        }
     }
     
 }
+
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
         cell.descriptionLabel.text = Note.dummyReminderNote.description
-        cell.backgroundColor = .white
+        cell.backgroundColor = .primaryBackgroundColor
         return cell
     }
     
