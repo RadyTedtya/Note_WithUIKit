@@ -22,7 +22,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        
     }
     
     func setup() {
@@ -36,9 +35,7 @@ class HomeViewController: UIViewController {
     }
     
     @objc func moveToLoginView() {
-//        print((UIApplication.shared.delegate as! AppDelegate).isLogin)
-        print(String((UIApplication.shared.delegate as! AppDelegate).isLogin))
-        if (UIApplication.shared.delegate as! AppDelegate).isLogin {
+        if NoteApp.shared.isLogin {
             navigationController?.pushViewController(SignOutViewController(), animated: true)
         } else {
             navigationController?.pushViewController(LoginViewController(), animated: true)

@@ -18,8 +18,10 @@ class SignOutViewController: UIViewController {
         do {
             try Auth.auth().signOut()
             print("Successfully signed out")
+            NoteApp.shared.isLogin = false
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
         }
     }
 }
+

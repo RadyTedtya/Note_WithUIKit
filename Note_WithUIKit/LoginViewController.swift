@@ -11,8 +11,6 @@ class LoginViewController: UIViewController {
     
     private let _viewModel: LoginViewModel! = .init()
     
-    var user: User! = .initUser
-    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -34,18 +32,18 @@ class LoginViewController: UIViewController {
     @objc func dismissView() {
         navigationController?.popViewController(animated: true)
     }
-
     
     @IBAction func loginButton(_ sender: Any) {
-        print("Login Clicked")
-        user.email = emailTextField!.text?.lowercased() ?? ""
-        user.password = passwordTextField!.text?.lowercased() ?? ""
-        _viewModel.loginResult = _viewModel.loginUser(user: user)
-        print("Login Result: \(_viewModel.loginResult)")
-        
-        print()
+        _viewModel.user.email = emailTextField!.text?.lowercased()
+        _viewModel.user.password = passwordTextField!.text?.lowercased()
+        _viewModel.loginUser()
+        if NoteApp.shared.isLogin {
+            print("Login Success")
+            navigationController?.popViewController(animated: true)
+        } else {
+            navigationController?.pushViewController(LoginViewController(), animated: true)
+        }
     }
-    
 
     @IBAction func registerButton(_ sender: Any) {
         navigationController?.pushViewController(RegisterViewController(), animated: true)

@@ -10,6 +10,7 @@
 		0E196576DA893BE63579A142 /* Pods_Note_WithUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8404845A993B5FD3C5AA675 /* Pods_Note_WithUIKit.framework */; };
 		97325BCB28F8E9E0B32C14D6 /* Pods_Note_WithUIKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729047742756706F17BBF3A6 /* Pods_Note_WithUIKitTests.framework */; };
 		AEB20B3F9FE6E20B314A9E10 /* Pods_Note_WithUIKit_Note_WithUIKitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5427A1A97AEECBAE84579C6C /* Pods_Note_WithUIKit_Note_WithUIKitUITests.framework */; };
+		D30A645E29B2F76000947B8A /* NoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30A645D29B2F76000947B8A /* NoteApp.swift */; };
 		D336FA3029A071A400200E36 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336FA2F29A071A400200E36 /* Color+Extension.swift */; };
 		D336FA3329A0822A00200E36 /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336FA3129A0822A00200E36 /* ReminderTableViewCell.swift */; };
 		D336FA3429A0822A00200E36 /* ReminderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D336FA3229A0822A00200E36 /* ReminderTableViewCell.xib */; };
@@ -75,6 +76,7 @@
 		A06A8F214B075D6B710C3610 /* Pods-Note_WithUIKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Note_WithUIKitTests.debug.xcconfig"; path = "Target Support Files/Pods-Note_WithUIKitTests/Pods-Note_WithUIKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE3ABE8FA7CFFB5D1389BCCD /* Pods-Note_WithUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Note_WithUIKit.release.xcconfig"; path = "Target Support Files/Pods-Note_WithUIKit/Pods-Note_WithUIKit.release.xcconfig"; sourceTree = "<group>"; };
 		B9DF890F397E49F23C4B3541 /* Pods-Note_WithUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Note_WithUIKit.debug.xcconfig"; path = "Target Support Files/Pods-Note_WithUIKit/Pods-Note_WithUIKit.debug.xcconfig"; sourceTree = "<group>"; };
+		D30A645D29B2F76000947B8A /* NoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteApp.swift; sourceTree = "<group>"; };
 		D336FA2F29A071A400200E36 /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		D336FA3129A0822A00200E36 /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
 		D336FA3229A0822A00200E36 /* ReminderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReminderTableViewCell.xib; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				D354E3B629AB298B00D62A60 /* User.swift */,
 				D37256E3299FA47E0056AD28 /* WelcomeViewController.swift */,
 				D37471F529A3001800A16F50 /* Note.swift */,
+				D30A645D29B2F76000947B8A /* NoteApp.swift */,
 				D354E3BA29AB5B8800D62A60 /* NoteTypeHeaderView.swift */,
 				D3E238D129A1D164004E962B /* NoteTypeCollectionViewCell.swift */,
 				D3E238D229A1D164004E962B /* NoteTypeCollectionViewCell.xib */,
@@ -516,6 +519,7 @@
 				D37471F829A3078900A16F50 /* UITableViewCell+Extension.swift in Sources */,
 				D37256EF299FA55F0056AD28 /* HomeViewController.swift in Sources */,
 				D379ED0429A88B5900E4DE26 /* RegisterViewController.swift in Sources */,
+				D30A645E29B2F76000947B8A /* NoteApp.swift in Sources */,
 				D336FA3029A071A400200E36 /* Color+Extension.swift in Sources */,
 				D37256F3299FA9050056AD28 /* ImageNoteTableViewCell.swift in Sources */,
 				D354E3B529AB292500D62A60 /* LoginViewModel.swift in Sources */,

@@ -10,12 +10,15 @@ import UIKit
 import FirebaseFirestore
 import FirebaseAuth
 
-class LoginViewModel: ObservableObject {
+class LoginViewModel {
     
-    var loginResult: Bool = false
+    var loginResult: Bool = ({
+        return Auth.auth().currentUser
+    }() != nil)
+    
     var db: Firestore!
     var handle: AuthStateDidChangeListenerHandle!
-    var user: User!
+    var user: User! = .initUser
     
     func firebaseSetup() {
         //[Start Firebase setup]
@@ -42,28 +45,41 @@ class LoginViewModel: ObservableObject {
         }
     }
     
-    func loginUser(user: User) -> Bool {
-        
-        Auth.auth().createUser(withEmail: user.email, password: user.password) { authResult, error in
+    func loginUser() {
+        Auth.auth().signIn(withEmail: user.email, password: user.password) { authResult, error in
             if let error = error {
                 print("Error: \(error)")
             } else {
-                self.loginResult = true
+                NoteApp.shared.isLogin = true
+                print("Login success in loginUser in LoginViewModel")
             }
         }
-        return loginResult
+        
     }
     
-    func signOutUser(user: User) -> Bool {
+    func signOutUser() {
         let firebaseAuth = Auth.auth()
           do {
             try firebaseAuth.signOut()
-              return loginResult == false
+              NoteApp.shared.isLogin = false
           } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
-              return loginResult == true
           }
+        print("User login status: \(loginResult)")
     }
+    
+    
+//    func registerUser(user: User) -> Bool {
+//        Auth.auth().createUser(withEmail: user.email, password: user.password) { authResult, error in
+//            if let error = error {
+//                print("Error: \(error)")
+//                return false
+//            } else {
+//                return true
+//            }
+//        }
+//    }
+    
     
     
     
