@@ -14,6 +14,8 @@ import FirebaseAuth
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
+    var isLogin: Bool = false
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -21,6 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: - START default fire_store
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
+        if Auth.auth().currentUser != nil {
+            isLogin = true
+        } else {
+            isLogin = false
+        }
 //        let db = Firestore.firestore()
         // [END default_firestore]
         
