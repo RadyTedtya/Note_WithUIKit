@@ -46,6 +46,8 @@
 		D379ED0529A88B5900E4DE26 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D379ED0329A88B5900E4DE26 /* RegisterViewController.xib */; };
 		D3E238D329A1D164004E962B /* NoteTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238D129A1D164004E962B /* NoteTypeCollectionViewCell.swift */; };
 		D3E238D429A1D164004E962B /* NoteTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E238D229A1D164004E962B /* NoteTypeCollectionViewCell.xib */; };
+		D3E5D30C29B1C4C8006E817B /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5D30A29B1C4C8006E817B /* SignOutViewController.swift */; };
+		D3E5D30D29B1C4C8006E817B /* SignOutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E5D30B29B1C4C8006E817B /* SignOutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		D379ED0329A88B5900E4DE26 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		D3E238D129A1D164004E962B /* NoteTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		D3E238D229A1D164004E962B /* NoteTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTypeCollectionViewCell.xib; sourceTree = "<group>"; };
+		D3E5D30A29B1C4C8006E817B /* SignOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
+		D3E5D30B29B1C4C8006E817B /* SignOutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignOutViewController.xib; sourceTree = "<group>"; };
 		E8404845A993B5FD3C5AA675 /* Pods_Note_WithUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Note_WithUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA07EF5F18650753B29C5559 /* Pods-Note_WithUIKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Note_WithUIKitTests.release.xcconfig"; path = "Target Support Files/Pods-Note_WithUIKitTests/Pods-Note_WithUIKitTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,6 +207,8 @@
 				D379ED0229A88B5900E4DE26 /* RegisterViewController.swift */,
 				D379ED0329A88B5900E4DE26 /* RegisterViewController.xib */,
 				D37256F1299FA9050056AD28 /* ImageNoteTableViewCell.swift */,
+				D3E5D30A29B1C4C8006E817B /* SignOutViewController.swift */,
+				D3E5D30B29B1C4C8006E817B /* SignOutViewController.xib */,
 				D37256E4299FA47E0056AD28 /* WelcomeViewController.xib */,
 				D37256F2299FA9050056AD28 /* ImageNoteTableViewCell.xib */,
 				D37471FB29A3212100A16F50 /* NewNoteViewController.swift */,
@@ -368,6 +374,7 @@
 				D379ED0529A88B5900E4DE26 /* RegisterViewController.xib in Resources */,
 				D379ED0129A88B4400E4DE26 /* LoginViewController.xib in Resources */,
 				D37256EA299FA5370056AD28 /* Main.storyboard in Resources */,
+				D3E5D30D29B1C4C8006E817B /* SignOutViewController.xib in Resources */,
 				D336FA3C29A093EE00200E36 /* AudioNote_TableViewCell.xib in Resources */,
 				D3E238D429A1D164004E962B /* NoteTypeCollectionViewCell.xib in Resources */,
 				D37949DF29B02CB20003F2F4 /* GoogleService-Info.plist in Resources */,
@@ -514,6 +521,7 @@
 				D354E3B529AB292500D62A60 /* LoginViewModel.swift in Sources */,
 				D37256B8299FA1170056AD28 /* ViewController.swift in Sources */,
 				D37256E5299FA47E0056AD28 /* WelcomeViewController.swift in Sources */,
+				D3E5D30C29B1C4C8006E817B /* SignOutViewController.swift in Sources */,
 				D37471FD29A3212100A16F50 /* NewNoteViewController.swift in Sources */,
 				D3E238D329A1D164004E962B /* NoteTypeCollectionViewCell.swift in Sources */,
 				D37256B4299FA1170056AD28 /* AppDelegate.swift in Sources */,

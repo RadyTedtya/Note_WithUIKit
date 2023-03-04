@@ -9,7 +9,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    var loginViewModel: LoginViewModel!
+    private let _viewModel: LoginViewModel! = .init()
+    
+    var user: User! = .initUser
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -21,8 +24,8 @@ class LoginViewController: UIViewController {
     func setup() {
         emailTextField.placeholder = "Email/Username"
         passwordTextField.placeholder = "Password"
-        emailTextField.text = ""
-        passwordTextField.text = ""
+        emailTextField.text = "test1@gmail.com"
+        passwordTextField.text = "test123"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .plain, target: self , action: #selector(dismissView))
         title = "Login"
         navigationItem.titleView?.backgroundColor = .secondaryColor
@@ -35,7 +38,12 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: Any) {
         print("Login Clicked")
-        loginViewModel.addNewDocument()
+        user.email = emailTextField!.text?.lowercased() ?? ""
+        user.password = passwordTextField!.text?.lowercased() ?? ""
+        _viewModel.loginResult = _viewModel.loginUser(user: user)
+        print("Login Result: \(_viewModel.loginResult)")
+        
+        print()
     }
     
 
