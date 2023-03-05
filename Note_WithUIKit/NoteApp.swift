@@ -10,6 +10,7 @@ import Foundation
 class NoteApp {
     
     var isLogin: Bool = false
+    
     static let shared = NoteApp()
     
     private init() {
