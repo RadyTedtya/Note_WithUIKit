@@ -14,7 +14,7 @@ class NoteApp {
     static let shared = NoteApp()
     
     private init() {
-        
+         
     }
     
 }
