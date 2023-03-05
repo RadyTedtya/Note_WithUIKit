@@ -11,6 +11,11 @@ class LoginViewController: UIViewController {
     
     private let _viewModel: LoginViewModel! = .init()
     
+<<<<<<< HEAD
+=======
+    var user: User! = .initUser
+    
+>>>>>>> c0d73cce155aa2660f0ec4c92b6ef949ec43d157
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -34,6 +39,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButton(_ sender: Any) {
+<<<<<<< HEAD
         _viewModel.user.email = emailTextField!.text?.lowercased()
         _viewModel.user.password = passwordTextField!.text?.lowercased()
         _viewModel.loginUser()
@@ -43,6 +49,15 @@ class LoginViewController: UIViewController {
         } else {
             navigationController?.pushViewController(LoginViewController(), animated: true)
         }
+=======
+        print("Login Clicked")
+        user.email = emailTextField!.text?.lowercased() ?? ""
+        user.password = passwordTextField!.text?.lowercased() ?? ""
+        _viewModel.loginResult = _viewModel.loginUser(user: user)
+        print("Login Result: \(_viewModel.loginResult)")
+        
+        print()
+>>>>>>> c0d73cce155aa2660f0ec4c92b6ef949ec43d157
     }
 
     @IBAction func registerButton(_ sender: Any) {

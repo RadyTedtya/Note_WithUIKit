@@ -12,6 +12,7 @@ import FirebaseAuth
 
 class LoginViewModel {
     
+<<<<<<< HEAD
     var loginResult: Bool = ({
         return Auth.auth().currentUser
     }() != nil)
@@ -19,6 +20,12 @@ class LoginViewModel {
     var db: Firestore!
     var handle: AuthStateDidChangeListenerHandle!
     var user: User! = .initUser
+=======
+    var loginResult: Bool = false
+    var db: Firestore!
+    var handle: AuthStateDidChangeListenerHandle!
+    var user: User!
+>>>>>>> c0d73cce155aa2660f0ec4c92b6ef949ec43d157
     
     func firebaseSetup() {
         //[Start Firebase setup]
@@ -45,6 +52,7 @@ class LoginViewModel {
         }
     }
     
+<<<<<<< HEAD
     func loginUser() {
         Auth.auth().signIn(withEmail: user.email, password: user.password) { authResult, error in
             if let error = error {
@@ -54,9 +62,21 @@ class LoginViewModel {
                 print("Login success in loginUser in LoginViewModel")
             }
         }
+=======
+    func loginUser(user: User) -> Bool {
+>>>>>>> c0d73cce155aa2660f0ec4c92b6ef949ec43d157
         
+        Auth.auth().createUser(withEmail: user.email, password: user.password) { authResult, error in
+            if let error = error {
+                print("Error: \(error)")
+            } else {
+                self.loginResult = true
+            }
+        }
+        return loginResult
     }
     
+<<<<<<< HEAD
     func signOutUser() {
         let firebaseAuth = Auth.auth()
           do {
@@ -82,5 +102,19 @@ class LoginViewModel {
     
     
     
+=======
+    func signOutUser(user: User) -> Bool {
+        let firebaseAuth = Auth.auth()
+          do {
+            try firebaseAuth.signOut()
+              return loginResult == false
+          } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+              return loginResult == true
+          }
+    }
+    
+    
+>>>>>>> c0d73cce155aa2660f0ec4c92b6ef949ec43d157
     
 }
