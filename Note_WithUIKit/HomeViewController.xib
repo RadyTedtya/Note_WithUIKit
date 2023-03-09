@@ -24,10 +24,10 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mg-EL-7Cd">
-                    <rect key="frame" x="228" y="713" width="130" height="60"/>
+                    <rect key="frame" x="228" y="733" width="130" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="130" id="Y47-Je-HTA"/>
-                        <constraint firstAttribute="height" constant="60" id="nEJ-Wm-98C"/>
+                        <constraint firstAttribute="height" constant="50" id="nEJ-Wm-98C"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" title="  Create" cornerStyle="capsule" buttonSize="large">
@@ -38,7 +38,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6mg-EL-7Cd" secondAttribute="bottom" constant="45" id="7Y8-l6-SuZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6mg-EL-7Cd" secondAttribute="bottom" constant="35" id="7Y8-l6-SuZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9ud-bH-gnZ" secondAttribute="bottom" id="7qK-C7-Uwr"/>
                 <constraint firstItem="9ud-bH-gnZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="PxS-Lq-b7G"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9ud-bH-gnZ" secondAttribute="trailing" id="SAm-JD-87G"/>
