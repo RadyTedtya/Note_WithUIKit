@@ -10,6 +10,8 @@ import FirebaseAuth
 
 class SignOutViewController: UIViewController {
     
+    let alert = UIAlertController(title: "Sign out result", message: "Signed out", preferredStyle: .alert)
+    
     override func viewDidLoad() {
         super.viewDidLoad()   
     }
@@ -17,9 +19,13 @@ class SignOutViewController: UIViewController {
     @IBAction func signOutUser(_ sender: Any) {
         do {
             try Auth.auth().signOut()
-            print("Successfully signed out")
             NoteApp.shared.isLogin = false
-            navigationController?.popViewController(animated: true)
+            let alertAction = UIAlertAction(title: "OK", style: .default) {_ in
+                self.navigationController?.popViewController(animated: true)
+            }
+            alert.addAction(alertAction)
+            self.present(alert, animated: true)
+            
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
         }
