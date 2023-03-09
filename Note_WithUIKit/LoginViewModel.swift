@@ -10,15 +10,38 @@ import UIKit
 import FirebaseFirestore
 import FirebaseAuth
 
+
 class LoginViewModel {
     
-    var loginResult: Bool = ({
-        return Auth.auth().currentUser
-    }() != nil)
-    
+    var loginResult: Bool = NoteApp.shared.isLogin
+    var isLoading: Bool = false
     var db: Firestore!
     var handle: AuthStateDidChangeListenerHandle!
     var user: User! = .initUser
+    
+    func loginUser(closure: @escaping () ->()) {
+        Auth.auth().signIn(withEmail: self.user.email, password: self.user.password) { authResult, error in
+            defer { self.isLoading = false; closure() }
+            if authResult != nil {
+                self.loginResult = true
+                NoteApp.shared.isLogin = true
+            } else {
+                self.loginResult = false
+                NoteApp.shared.isLogin = false
+            }
+        }
+    }
+    
+    func signOutUser() {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            NoteApp.shared.isLogin = false
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
+        print("User login status: \(loginResult)")
+    }
     
     func firebaseSetup() {
         //[Start Firebase setup]
@@ -27,6 +50,17 @@ class LoginViewModel {
         //[End setup]
         db = Firestore.firestore()
     }
+    
+    //    func registerUser(user: User) -> Bool {
+    //        Auth.auth().createUser(withEmail: user.email, password: user.password) { authResult, error in
+    //            if let error = error {
+    //                print("Error: \(error)")
+    //                return false
+    //            } else {
+    //                return true
+    //            }
+    //        }
+    //    }
     
     //Add new document with generated ID
     func addNewDocument() {
@@ -44,49 +78,6 @@ class LoginViewModel {
             
         }
     }
-    
-    func loginUser() {
-        Auth.auth().signIn(withEmail: user.email, password: user.password) { authResult, error in
-            if let error = error {
-                print("Error: \(error)")
-            } else {
-                NoteApp.shared.isLogin = true
-                print("Login success in loginUser in LoginViewModel")
-            }
-        }
-        
-        Auth.auth().createUser(withEmail: user.email, password: user.password) { authResult, error in
-            if let error = error {
-                print("Error: \(error)")
-            } else {
-                self.loginResult = true
-            }
-        }
-        return loginResult
-    }
-    
-    func signOutUser() {
-        let firebaseAuth = Auth.auth()
-          do {
-            try firebaseAuth.signOut()
-              NoteApp.shared.isLogin = false
-          } catch let signOutError as NSError {
-            print("Error signing out: %@", signOutError)
-          }
-        print("User login status: \(loginResult)")
-    }
-    
-    
-//    func registerUser(user: User) -> Bool {
-//        Auth.auth().createUser(withEmail: user.email, password: user.password) { authResult, error in
-//            if let error = error {
-//                print("Error: \(error)")
-//                return false
-//            } else {
-//                return true
-//            }
-//        }
-//    }
     
     
     

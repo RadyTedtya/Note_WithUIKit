@@ -35,3 +35,5 @@ struct Note: Identifiable {
     
     static let dummyReminderNote: Note = .init(id: 1, title: "winter vacation", date: "12 Dec 2017", noteType: .reminderNote, audio: nil, image: nil, description: description)
 }
+
+
