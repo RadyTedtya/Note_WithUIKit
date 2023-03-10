@@ -33,6 +33,9 @@
                     <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" title="  Create" cornerStyle="capsule" buttonSize="large">
                         <color key="baseBackgroundColor" red="0.38431372549999998" green="0.45098039220000002" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="moveToCreateNoteView:" destination="-1" eventType="touchUpInside" id="RWG-l4-SA8"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
