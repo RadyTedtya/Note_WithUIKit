@@ -1,0 +1,6 @@
+framework module Pods_Note_WithUIKit {
+  umbrella header "Pods-Note_WithUIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

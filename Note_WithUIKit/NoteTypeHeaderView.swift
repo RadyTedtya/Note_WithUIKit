@@ -19,8 +19,6 @@ class NoteTypeHeaderView: UIView {
         collectionView.setCollectionViewLayout(layout, animated: true)
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         collectionView.register(NoteTypeCollectionViewCell.self)
-//        collectionView.backgroundColor = .primaryColor
-        
         return collectionView
     }()
 

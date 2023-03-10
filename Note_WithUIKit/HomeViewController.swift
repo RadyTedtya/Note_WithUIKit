@@ -12,7 +12,6 @@ class HomeViewController: UIViewController {
     private let _sectionHeight: CGFloat = 80
     let searchController: UISearchController! = .init()
     
-    
     @IBOutlet weak var tableView: UITableView!
     
     private lazy var noteTypeHeaderView: NoteTypeHeaderView = {

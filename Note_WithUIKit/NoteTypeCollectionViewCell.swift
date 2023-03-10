@@ -18,7 +18,6 @@ class NoteTypeCollectionViewCell: UICollectionViewCell {
             } else {
                 backgroundColor = .primaryColor
             }
- //            backgroundColor = isSelected ? .blue : .primaryColor
             
             if isSelected {
                 cellButton.tintColor = .primaryBackgroundColor

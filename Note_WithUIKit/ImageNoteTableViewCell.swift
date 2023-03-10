@@ -33,15 +33,6 @@ class ImageNoteTableViewCell: UITableViewCell {
         contentView.layer.cornerRadius = 10
     }
     
-    func configure(_ model: Note){
-        //    let image = UIImage(named: model.image ?? "photo")
-        //    titleLabel.text = model.title
-        //    cell.titleLabel.text = note.title
-        //    cell.dateLabel.text = note.date
-        //    cell.pictureImageView = image
-        //    cell.descriptionLabel.text = note.description
-    }
-    
     func configureCell(cell: ImageNoteTableViewCell, cellIndex: Int) -> UITableViewCell {
         let note: Note = Note.dummyImageNote
         let imageNote = UIImage(named: note.image  ?? "photo")

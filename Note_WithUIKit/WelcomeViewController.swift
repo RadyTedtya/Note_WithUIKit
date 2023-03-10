@@ -15,7 +15,6 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         descriptionLabel.textColor = UIColor.primaryFontColor
         descriptionLabel.text = "Capture what’s on your mind & get a reminder later at the right place or time. You can also add voice memo & other features"
-//        UIApplication.shared.delegate as! AppDelegate
     }
 
     @IBAction func onClicked(_ sender: Any) {
