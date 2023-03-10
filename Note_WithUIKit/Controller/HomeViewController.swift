@@ -23,6 +23,13 @@ class HomeViewController: UIViewController {
         setup()
     }
     
+    @IBAction func moveToCreateNoteView(_ sender: Any) {
+        let viewController = UINavigationController(rootViewController: CreateNoteViewController())
+        viewController.modalPresentationStyle = .fullScreen
+        viewController.navigationBar.backgroundColor = .primaryBackgroundColor
+        self.present(viewController, animated: true)
+    }
+    
     func setup() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: self, action: #selector(moveToLoginView))
         title = "Home View"
