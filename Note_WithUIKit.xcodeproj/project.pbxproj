@@ -45,6 +45,7 @@
 		D379ED0129A88B4400E4DE26 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D379ECFF29A88B4400E4DE26 /* LoginViewController.xib */; };
 		D379ED0429A88B5900E4DE26 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D379ED0229A88B5900E4DE26 /* RegisterViewController.swift */; };
 		D379ED0529A88B5900E4DE26 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D379ED0329A88B5900E4DE26 /* RegisterViewController.xib */; };
+		D3DB582C29BAC11E00652A4C /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB582B29BAC11E00652A4C /* ContentViewModel.swift */; };
 		D3E238D329A1D164004E962B /* NoteTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E238D129A1D164004E962B /* NoteTypeCollectionViewCell.swift */; };
 		D3E238D429A1D164004E962B /* NoteTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E238D229A1D164004E962B /* NoteTypeCollectionViewCell.xib */; };
 		D3E5D30C29B1C4C8006E817B /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5D30A29B1C4C8006E817B /* SignOutViewController.swift */; };
@@ -115,6 +116,7 @@
 		D379ECFF29A88B4400E4DE26 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		D379ED0229A88B5900E4DE26 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D379ED0329A88B5900E4DE26 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		D3DB582B29BAC11E00652A4C /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		D3E238D129A1D164004E962B /* NoteTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		D3E238D229A1D164004E962B /* NoteTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTypeCollectionViewCell.xib; sourceTree = "<group>"; };
 		D3E5D30A29B1C4C8006E817B /* SignOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
@@ -189,37 +191,12 @@
 		D37256B2299FA1170056AD28 /* Note_WithUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				D3DB582F29BAC17C00652A4C /* Controller */,
+				D3DB582E29BAC15C00652A4C /* View */,
+				D3DB582D29BAC14300652A4C /* Model */,
 				D3BE051E29A06E7000534F4F /* Common */,
 				D37256B3299FA1170056AD28 /* AppDelegate.swift */,
 				D37256B5299FA1170056AD28 /* SceneDelegate.swift */,
-				D37256B7299FA1170056AD28 /* ViewController.swift */,
-				D354E3B629AB298B00D62A60 /* User.swift */,
-				D37256E3299FA47E0056AD28 /* WelcomeViewController.swift */,
-				D37471F529A3001800A16F50 /* Note.swift */,
-				D30A645D29B2F76000947B8A /* NoteApp.swift */,
-				D354E3BA29AB5B8800D62A60 /* NoteTypeHeaderView.swift */,
-				D3E238D129A1D164004E962B /* NoteTypeCollectionViewCell.swift */,
-				D3E238D229A1D164004E962B /* NoteTypeCollectionViewCell.xib */,
-				D37256ED299FA55F0056AD28 /* HomeViewController.swift */,
-				D37256EE299FA55F0056AD28 /* HomeViewController.xib */,
-				D336FA3929A093EE00200E36 /* AudioNote_TableViewCell.swift */,
-				D354E3B429AB292500D62A60 /* LoginViewModel.swift */,
-				D379ECFE29A88B4400E4DE26 /* LoginViewController.swift */,
-				D379ECFF29A88B4400E4DE26 /* LoginViewController.xib */,
-				D336FA3A29A093EE00200E36 /* AudioNote_TableViewCell.xib */,
-				D379ED0229A88B5900E4DE26 /* RegisterViewController.swift */,
-				D379ED0329A88B5900E4DE26 /* RegisterViewController.xib */,
-				D37256F1299FA9050056AD28 /* ImageNoteTableViewCell.swift */,
-				D3E5D30A29B1C4C8006E817B /* SignOutViewController.swift */,
-				D3E5D30B29B1C4C8006E817B /* SignOutViewController.xib */,
-				D37256E4299FA47E0056AD28 /* WelcomeViewController.xib */,
-				D37256F2299FA9050056AD28 /* ImageNoteTableViewCell.xib */,
-				D37471FB29A3212100A16F50 /* NewNoteViewController.swift */,
-				D37471FC29A3212100A16F50 /* NewNoteViewController.xib */,
-				D336FA3129A0822A00200E36 /* ReminderTableViewCell.swift */,
-				D336FA3229A0822A00200E36 /* ReminderTableViewCell.xib */,
-				D37256E9299FA5370056AD28 /* Main.storyboard */,
-				D37256BC299FA1180056AD28 /* Assets.xcassets */,
 				D37256C1299FA1180056AD28 /* Info.plist */,
 				D37949DE29B02CB20003F2F4 /* GoogleService-Info.plist */,
 			);
@@ -256,6 +233,7 @@
 		D3BE051E29A06E7000534F4F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D37256BC299FA1180056AD28 /* Assets.xcassets */,
 				D336FA2F29A071A400200E36 /* Color+Extension.swift */,
 				D37471F729A3078900A16F50 /* UITableViewCell+Extension.swift */,
 				D37471F929A3081600A16F50 /* UITableView+Extension.swift */,
@@ -263,6 +241,55 @@
 				D37471FF29A36DC100A16F50 /* UICollectionView+Extension.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		D3DB582D29BAC14300652A4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D354E3B629AB298B00D62A60 /* User.swift */,
+				D37471F529A3001800A16F50 /* Note.swift */,
+				D354E3B429AB292500D62A60 /* LoginViewModel.swift */,
+				D3DB582B29BAC11E00652A4C /* ContentViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3DB582E29BAC15C00652A4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3E238D229A1D164004E962B /* NoteTypeCollectionViewCell.xib */,
+				D37256EE299FA55F0056AD28 /* HomeViewController.xib */,
+				D379ECFF29A88B4400E4DE26 /* LoginViewController.xib */,
+				D336FA3A29A093EE00200E36 /* AudioNote_TableViewCell.xib */,
+				D379ED0329A88B5900E4DE26 /* RegisterViewController.xib */,
+				D3E5D30B29B1C4C8006E817B /* SignOutViewController.xib */,
+				D37256E4299FA47E0056AD28 /* WelcomeViewController.xib */,
+				D37256F2299FA9050056AD28 /* ImageNoteTableViewCell.xib */,
+				D37471FC29A3212100A16F50 /* NewNoteViewController.xib */,
+				D336FA3229A0822A00200E36 /* ReminderTableViewCell.xib */,
+				D37256E9299FA5370056AD28 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D3DB582F29BAC17C00652A4C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D37256B7299FA1170056AD28 /* ViewController.swift */,
+				D37256E3299FA47E0056AD28 /* WelcomeViewController.swift */,
+				D30A645D29B2F76000947B8A /* NoteApp.swift */,
+				D354E3BA29AB5B8800D62A60 /* NoteTypeHeaderView.swift */,
+				D3E238D129A1D164004E962B /* NoteTypeCollectionViewCell.swift */,
+				D37256ED299FA55F0056AD28 /* HomeViewController.swift */,
+				D336FA3929A093EE00200E36 /* AudioNote_TableViewCell.swift */,
+				D379ECFE29A88B4400E4DE26 /* LoginViewController.swift */,
+				D379ED0229A88B5900E4DE26 /* RegisterViewController.swift */,
+				D37256F1299FA9050056AD28 /* ImageNoteTableViewCell.swift */,
+				D3E5D30A29B1C4C8006E817B /* SignOutViewController.swift */,
+				D37471FB29A3212100A16F50 /* NewNoteViewController.swift */,
+				D336FA3129A0822A00200E36 /* ReminderTableViewCell.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -522,6 +549,7 @@
 				D30A645E29B2F76000947B8A /* NoteApp.swift in Sources */,
 				D336FA3029A071A400200E36 /* Color+Extension.swift in Sources */,
 				D37256F3299FA9050056AD28 /* ImageNoteTableViewCell.swift in Sources */,
+				D3DB582C29BAC11E00652A4C /* ContentViewModel.swift in Sources */,
 				D354E3B529AB292500D62A60 /* LoginViewModel.swift in Sources */,
 				D37256B8299FA1170056AD28 /* ViewController.swift in Sources */,
 				D37256E5299FA47E0056AD28 /* WelcomeViewController.swift in Sources */,

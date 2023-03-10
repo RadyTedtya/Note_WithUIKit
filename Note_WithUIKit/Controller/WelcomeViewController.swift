@@ -24,5 +24,4 @@ class WelcomeViewController: UIViewController {
         self.present(homeViewController, animated: true)
     }
     
-
 }
