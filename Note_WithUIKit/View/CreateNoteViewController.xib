@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateNoteViewController" customModule="Note_WithUIKit" customModuleProvider="target">
             <connections>
+                <outlet property="dateTimeLabel" destination="NeC-BE-71P" id="tsm-Bq-sPZ"/>
+                <outlet property="descriptionLabel" destination="XP3-aJ-Jdd" id="39i-AK-Pj8"/>
+                <outlet property="titleLabel" destination="rWs-2U-BYf" id="Kqa-GP-fQu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

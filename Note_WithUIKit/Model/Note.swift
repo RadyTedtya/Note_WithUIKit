@@ -27,6 +27,24 @@ struct Note: Identifiable {
     var image: String?
     var description: String?
     
+    var dictionary: [String: Any] {
+        return [
+            "id" : id,
+            "title": title!,
+            "date": date!,
+            "noteType": noteType!,
+            "audio": audio!,
+            "image": image!,
+            "description": description!,
+        ]
+    }
+    
+    
+    
+}
+
+extension Note {
+    
     static let description = "Tum dicere exorsus est laborum et via procedat oratio quaerimus igitur, quid sit. Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si ob……"
     
     static let dummyImageNote: Note = .init(id: 1, title: "summer vacation", date: "12 Jan 2021", noteType: .imageNote, audio: nil, image: "image", description: "Tum dicere exorsus est laborum et via procedat oratio quaerimus igitur, quid sit. Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si ob……")

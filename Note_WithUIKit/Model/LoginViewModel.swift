@@ -15,9 +15,8 @@ class LoginViewModel {
     
     var loginResult: Bool = NoteApp.shared.isLogin
     var isLoading: Bool = false
-    var db: Firestore!
-    var handle: AuthStateDidChangeListenerHandle!
     var user: User! = .initUser
+    var handle: AuthStateDidChangeListenerHandle!
     
     func loginUser(closure: @escaping () ->()) {
         Auth.auth().signIn(withEmail: self.user.email, password: self.user.password) { authResult, error in
@@ -43,13 +42,6 @@ class LoginViewModel {
         print("User login status: \(loginResult)")
     }
     
-    func firebaseSetup() {
-        //[Start Firebase setup]
-        let setting = FirestoreSettings()
-        Firestore.firestore().settings = setting
-        //[End setup]
-        db = Firestore.firestore()
-    }
     
     //    func registerUser(user: User) -> Bool {
     //        Auth.auth().createUser(withEmail: user.email, password: user.password) { authResult, error in
@@ -62,22 +54,7 @@ class LoginViewModel {
     //        }
     //    }
     
-    //Add new document with generated ID
-    func addNewDocument() {
-        var ref: DocumentReference? = nil
-        ref = db.collection("users").addDocument(data: [
-            "email":"ted@gmail.com",
-            "username":"ted",
-            "password":"12345"
-        ]) { error in
-            if let error = error {
-                print("Error adding document: \(error)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
-            }
-            
-        }
-    }
+    
     
     
     
