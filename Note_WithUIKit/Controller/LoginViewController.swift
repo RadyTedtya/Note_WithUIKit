@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
         isLoading = true
         _viewModel.user.email = emailTextField!.text?.lowercased()
         _viewModel.user.password = passwordTextField!.text?.lowercased()
-        _viewModel.loginUser(closure: {
+        _viewModel.loginUser(loginClosure: {
             if NoteApp.shared.isLogin {
                 self.alert.title = "Login Success"
                 let alertAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in

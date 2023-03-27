@@ -18,10 +18,10 @@ class NoteTypeHeaderView: UIView {
         collectionView.delegate = self
         collectionView.setCollectionViewLayout(layout, animated: true)
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        collectionView.register(NoteTypeCollectionViewCell.self)
+        collectionView.register(NoteCollectionViewCell.self)
         return collectionView
     }()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -47,7 +47,6 @@ class NoteTypeHeaderView: UIView {
         ])
     }
     
-
 }
 
 extension NoteTypeHeaderView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -61,11 +60,25 @@ extension NoteTypeHeaderView: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeue(NoteTypeCollectionViewCell.self, for: indexPath)
+        let cell = collectionView.dequeue(NoteCollectionViewCell.self, for: indexPath)
         cell.awakeFromNib()
         cell.cellButton.setTitle(String(NoteType.allCases[indexPath.item].rawValue), for: .normal)
-        cell.isSelected = true
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? NoteCollectionViewCell {
+            
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? NoteCollectionViewCell else {
+            return
+        }
+        
+    }
+    
+    
     
 }
