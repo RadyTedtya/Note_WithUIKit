@@ -62,23 +62,45 @@ extension NoteTypeHeaderView: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeue(NoteCollectionViewCell.self, for: indexPath)
         cell.awakeFromNib()
-        cell.cellButton.setTitle(String(NoteType.allCases[indexPath.item].rawValue), for: .normal)
+        cell.textLabel.text = String(NoteType.allCases[indexPath.item].rawValue)
         return cell
     }
     
+//    private func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//
+//        //        if let cell = collectionView.cellForItem(at: indexPath) as? NoteCollectionViewCell {
+//        //            cell.showIcon()
+//        //            print("clicked")
+//        //        }
+//
+//
+//        guard let cell = collectionView.cellForItem(at: indexPath) else { return <#default value#> }
+//            print("test did select: \(indexPath)"  )
+//        return cell
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) as? NoteCollectionViewCell {
-            
-        }
+
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        guard let cell = collectionView.cellForItem(at: indexPath) as? NoteCollectionViewCell else {
-            return
-        }
-        
+        print("clicked")
+        //        if let cell = collectionView.cellForItem(at: indexPath) as? NoteCollectionViewCell {
+        //                cell.hideIcon()
+        //            print("clicked")
+        //            }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        //        if let cell = collectionView.cellForItem(at: indexPath) {
+        //            cell.contentView.backgroundColor = .red
+        //            }
+    }
     
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        //        if let cell = collectionView.cellForItem(at: indexPath) {
+        //                cell.contentView.backgroundColor = nil
+        //            }
+    }
     
 }

@@ -80,4 +80,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         return 55
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selected \(indexPath.row)")
+    }
 }

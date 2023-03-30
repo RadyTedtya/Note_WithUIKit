@@ -8,29 +8,33 @@
 import UIKit
 
 class NoteCollectionViewCell: UICollectionViewCell {
-
-    @IBOutlet weak var cellButton: UIButton!
+    
+    
+    @IBOutlet weak var textLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCellButton()
-    
     }
     
-
     
-    override var isSelected: Bool {
-        didSet {
-            self.contentView.backgroundColor = isSelected ? UIColor.blue : UIColor.yellow
-            self.cellButton.alpha = isSelected ? 0.75 : 1.0
-        }
-      }
+    
+//    override var isSelected: Bool {
+//        didSet {
+//            self.contentView.backgroundColor = isSelected ? UIColor.blue : UIColor.yellow
+//            self.cellButton.alpha = isSelected ? 0.75 : 1.0
+//        }
+//    }
     
     func setupCellButton() {
-        cellButton.titleLabel?.backgroundColor = .white
-        cellButton.imageView?.backgroundColor = .secondaryColor
-        
+        let backgroundView = UIView(frame: bounds)
+        backgroundView.backgroundColor = UIColor.primaryColor
+        self.backgroundView = backgroundView
+
+        let selectedBackgroundView = UIView(frame: bounds)
+        selectedBackgroundView.backgroundColor = UIColor.secondaryColor
+        self.selectedBackgroundView = selectedBackgroundView
     }
-
-
+    
+    
 }

@@ -16,23 +16,24 @@
                 <rect key="frame" x="0.0" y="0.0" width="75" height="35"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGq-hq-Kaj">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tV1-n0-ZV1">
                         <rect key="frame" x="0.0" y="0.0" width="75" height="35"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                    </button>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="JGq-hq-Kaj" secondAttribute="bottom" id="ApG-Nm-gh8"/>
-                <constraint firstItem="JGq-hq-Kaj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DaL-JY-3Bt"/>
-                <constraint firstItem="JGq-hq-Kaj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="O6f-dx-NPB"/>
-                <constraint firstAttribute="trailing" secondItem="JGq-hq-Kaj" secondAttribute="trailing" id="fm1-6b-ONO"/>
+                <constraint firstAttribute="bottom" secondItem="tV1-n0-ZV1" secondAttribute="bottom" id="GcQ-7G-duh"/>
+                <constraint firstItem="tV1-n0-ZV1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="es6-Qk-pA2"/>
+                <constraint firstItem="tV1-n0-ZV1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fRb-og-h4e"/>
+                <constraint firstAttribute="trailing" secondItem="tV1-n0-ZV1" secondAttribute="trailing" id="gfy-ME-Vdi"/>
             </constraints>
             <size key="customSize" width="75" height="35"/>
             <connections>
-                <outlet property="cellButton" destination="JGq-hq-Kaj" id="5Ac-09-zwm"/>
+                <outlet property="textLabel" destination="tV1-n0-ZV1" id="TQy-SD-h3P"/>
             </connections>
             <point key="canvasLocation" x="48.091603053435115" y="15.140845070422536"/>
         </collectionViewCell>
