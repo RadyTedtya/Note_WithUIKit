@@ -11,6 +11,8 @@ class NoteApp {
     
     var isLogin: Bool = false
     
+    var selectedType: NoteType = .allNotes
+    
     static let shared = NoteApp()
     
     private init() {

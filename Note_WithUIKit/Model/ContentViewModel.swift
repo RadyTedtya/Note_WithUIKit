@@ -10,17 +10,37 @@ import UIKit
 import FirebaseFirestore
 
 class ContentViewModel {
-    var db: Firestore!
 
+    var db: Firestore!
+    var notes: [Note] = []
     
     init() {
         firebaseSetup()
+        populateData()
     }
     
-    func createNote() {
-        print("Create Note")
+    func filteredNotes(fortype type: NoteType) -> [Note] {
+        print(notes.filter { $0.noteType == type })
+        return notes.filter { $0.noteType == type }
     }
     
+}
+
+
+extension ContentViewModel {
+    
+    //populate test data
+    func populateData() {
+        for _ in 1...4 {
+            notes.append(Note.dummyAudioNote)
+            notes.append(Note.dummyImageNote)
+            notes.append(Note.dummyReminderNote)
+        }
+    }
+    
+    
+    
+    //Firebase Setup
     func firebaseSetup() {
         //[Start Firebase setup]
         let setting = FirestoreSettings()
@@ -42,21 +62,8 @@ class ContentViewModel {
             } else {
                 print("Document added with ID: \(ref!.documentID)")
             }
-            
         }
     }
-}
-
-
-class testContentViewModel {
-    
-    let collection = Firestore.firestore().collection("notes")
-    
-    var note = Note.dummyImageNote
-
-    func addDoc() {
-//        collection.addDocument(data: note.dictionary)
-    }
-    
     
 }
+

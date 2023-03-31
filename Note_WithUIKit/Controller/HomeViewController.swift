@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
     
     private let _sectionHeight: CGFloat = 80
     let searchController: UISearchController! = .init()
-    
+    var _contentView: ContentViewModel = .init()
     @IBOutlet weak var tableView: UITableView!
     
     private lazy var noteTypeHeaderView: NoteTypeHeaderView = {
@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //        _contentView.populateData()
         setup()
     }
     
@@ -33,8 +34,11 @@ class HomeViewController: UIViewController {
     func setup() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: self, action: #selector(moveToLoginView))
         title = "Home View"
+        
         searchController.searchBar.barTintColor = .primaryBackgroundColor
         tableView.register(ImageNoteTableViewCell.self)
+        tableView.register(AudioNoteTableViewCell.self)
+        tableView.register(ReminderTableViewCell.self)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableHeaderView = searchController.searchBar
@@ -53,15 +57,33 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
+    //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    //        let cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
+    //        cell.descriptionLabel.text = Note.dummyReminderNote.description
+    //        cell.backgroundColor = .primaryBackgroundColor
+    //        return cell
+    //    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
-        cell.descriptionLabel.text = Note.dummyReminderNote.description
-        cell.backgroundColor = .primaryBackgroundColor
+        var cell: UITableViewCell = .init()
+        switch _contentView.notes[indexPath.row].noteType {
+        case .allNotes:
+            cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
+        case .audioNote:
+            cell = tableView.dequeue(AudioNoteTableViewCell.self, for: indexPath)
+        case .reminderNote:
+            cell = tableView.dequeue(ReminderTableViewCell.self, for: indexPath)
+        case .imageNote:
+            cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
+        default:
+            cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
+        }
         return cell
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return _contentView.notes.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

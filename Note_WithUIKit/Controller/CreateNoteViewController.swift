@@ -29,7 +29,7 @@ class CreateNoteViewController: UIViewController {
     
     
     @objc func createNote() {
-        _viewModel.createNote()
+//        _viewModel.createNote()
     }
     
     func setStaticData() {

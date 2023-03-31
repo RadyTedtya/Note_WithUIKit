@@ -16,7 +16,6 @@ class LoginViewModel {
     var loginResult: Bool = NoteApp.shared.isLogin
     var isLoading: Bool = false
     var user: User! = .initUser
-    var handle: AuthStateDidChangeListenerHandle!
     
     func loginUser(loginClosure: @escaping () ->()) {
         Auth.auth().signIn(withEmail: self.user.email, password: self.user.password) { authResult, error in

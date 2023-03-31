@@ -14,8 +14,8 @@
 		D336FA3029A071A400200E36 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336FA2F29A071A400200E36 /* Color+Extension.swift */; };
 		D336FA3329A0822A00200E36 /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336FA3129A0822A00200E36 /* ReminderTableViewCell.swift */; };
 		D336FA3429A0822A00200E36 /* ReminderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D336FA3229A0822A00200E36 /* ReminderTableViewCell.xib */; };
-		D336FA3B29A093EE00200E36 /* AudioNote_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336FA3929A093EE00200E36 /* AudioNote_TableViewCell.swift */; };
-		D336FA3C29A093EE00200E36 /* AudioNote_TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D336FA3A29A093EE00200E36 /* AudioNote_TableViewCell.xib */; };
+		D336FA3B29A093EE00200E36 /* AudioNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336FA3929A093EE00200E36 /* AudioNoteTableViewCell.swift */; };
+		D336FA3C29A093EE00200E36 /* AudioNoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D336FA3A29A093EE00200E36 /* AudioNoteTableViewCell.xib */; };
 		D354E3B529AB292500D62A60 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354E3B429AB292500D62A60 /* LoginViewModel.swift */; };
 		D354E3B729AB298B00D62A60 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354E3B629AB298B00D62A60 /* User.swift */; };
 		D354E3BB29AB5B8800D62A60 /* NoteTypeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354E3BA29AB5B8800D62A60 /* NoteTypeHeaderView.swift */; };
@@ -81,8 +81,8 @@
 		D336FA2F29A071A400200E36 /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		D336FA3129A0822A00200E36 /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
 		D336FA3229A0822A00200E36 /* ReminderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReminderTableViewCell.xib; sourceTree = "<group>"; };
-		D336FA3929A093EE00200E36 /* AudioNote_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioNote_TableViewCell.swift; sourceTree = "<group>"; };
-		D336FA3A29A093EE00200E36 /* AudioNote_TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioNote_TableViewCell.xib; sourceTree = "<group>"; };
+		D336FA3929A093EE00200E36 /* AudioNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioNoteTableViewCell.swift; sourceTree = "<group>"; };
+		D336FA3A29A093EE00200E36 /* AudioNoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioNoteTableViewCell.xib; sourceTree = "<group>"; };
 		D354E3B429AB292500D62A60 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D354E3B629AB298B00D62A60 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D354E3BA29AB5B8800D62A60 /* NoteTypeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTypeHeaderView.swift; sourceTree = "<group>"; };
@@ -246,6 +246,7 @@
 		D3DB582D29BAC14300652A4C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D30A645D29B2F76000947B8A /* NoteApp.swift */,
 				D354E3B629AB298B00D62A60 /* User.swift */,
 				D37471F529A3001800A16F50 /* Note.swift */,
 				D354E3B429AB292500D62A60 /* LoginViewModel.swift */,
@@ -260,7 +261,7 @@
 				D37711E629D1561700DCFCC2 /* NoteCollectionViewCell.xib */,
 				D37256EE299FA55F0056AD28 /* HomeViewController.xib */,
 				D379ECFF29A88B4400E4DE26 /* LoginViewController.xib */,
-				D336FA3A29A093EE00200E36 /* AudioNote_TableViewCell.xib */,
+				D336FA3A29A093EE00200E36 /* AudioNoteTableViewCell.xib */,
 				D379ED0329A88B5900E4DE26 /* RegisterViewController.xib */,
 				D3E5D30B29B1C4C8006E817B /* SignOutViewController.xib */,
 				D37256E4299FA47E0056AD28 /* WelcomeViewController.xib */,
@@ -277,17 +278,16 @@
 			children = (
 				D37256B7299FA1170056AD28 /* ViewController.swift */,
 				D37256E3299FA47E0056AD28 /* WelcomeViewController.swift */,
-				D30A645D29B2F76000947B8A /* NoteApp.swift */,
 				D354E3BA29AB5B8800D62A60 /* NoteTypeHeaderView.swift */,
 				D37711E429D155F300DCFCC2 /* NoteCollectionViewCell.swift */,
 				D37256ED299FA55F0056AD28 /* HomeViewController.swift */,
-				D336FA3929A093EE00200E36 /* AudioNote_TableViewCell.swift */,
 				D379ECFE29A88B4400E4DE26 /* LoginViewController.swift */,
 				D379ED0229A88B5900E4DE26 /* RegisterViewController.swift */,
 				D37256F1299FA9050056AD28 /* ImageNoteTableViewCell.swift */,
+				D336FA3929A093EE00200E36 /* AudioNoteTableViewCell.swift */,
+				D336FA3129A0822A00200E36 /* ReminderTableViewCell.swift */,
 				D3E5D30A29B1C4C8006E817B /* SignOutViewController.swift */,
 				D37471FB29A3212100A16F50 /* CreateNoteViewController.swift */,
-				D336FA3129A0822A00200E36 /* ReminderTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -406,7 +406,7 @@
 				D37256EA299FA5370056AD28 /* Main.storyboard in Resources */,
 				D3E5D30D29B1C4C8006E817B /* SignOutViewController.xib in Resources */,
 				D37711E729D1561700DCFCC2 /* NoteCollectionViewCell.xib in Resources */,
-				D336FA3C29A093EE00200E36 /* AudioNote_TableViewCell.xib in Resources */,
+				D336FA3C29A093EE00200E36 /* AudioNoteTableViewCell.xib in Resources */,
 				D37949DF29B02CB20003F2F4 /* GoogleService-Info.plist in Resources */,
 				D37256F4299FA9050056AD28 /* ImageNoteTableViewCell.xib in Resources */,
 				D37256E6299FA47E0056AD28 /* WelcomeViewController.xib in Resources */,
@@ -559,7 +559,7 @@
 				D37256B4299FA1170056AD28 /* AppDelegate.swift in Sources */,
 				D37471F629A3001800A16F50 /* Note.swift in Sources */,
 				D354E3BB29AB5B8800D62A60 /* NoteTypeHeaderView.swift in Sources */,
-				D336FA3B29A093EE00200E36 /* AudioNote_TableViewCell.swift in Sources */,
+				D336FA3B29A093EE00200E36 /* AudioNoteTableViewCell.swift in Sources */,
 				D37256B6299FA1170056AD28 /* SceneDelegate.swift in Sources */,
 				D374720229A36FD200A16F50 /* UICollectionViewCell+Extension.swift in Sources */,
 				D336FA3329A0822A00200E36 /* ReminderTableViewCell.swift in Sources */,
