@@ -7,8 +7,10 @@
 
 import UIKit
 
-class AudioNote_TableViewCell: UITableViewCell {
+class AudioNoteTableViewCell: UITableViewCell {
 
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

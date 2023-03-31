@@ -9,24 +9,14 @@ import UIKit
 
 class NoteCollectionViewCell: UICollectionViewCell {
     
-    
     @IBOutlet weak var textLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupCellButton()
+        setupSelectedCell()
     }
     
-    
-    
-//    override var isSelected: Bool {
-//        didSet {
-//            self.contentView.backgroundColor = isSelected ? UIColor.blue : UIColor.yellow
-//            self.cellButton.alpha = isSelected ? 0.75 : 1.0
-//        }
-//    }
-    
-    func setupCellButton() {
+    func setupSelectedCell() {
         let backgroundView = UIView(frame: bounds)
         backgroundView.backgroundColor = UIColor.primaryColor
         self.backgroundView = backgroundView
