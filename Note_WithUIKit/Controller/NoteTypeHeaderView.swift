@@ -8,9 +8,10 @@
 import UIKit
 
 class NoteTypeHeaderView: UIView {
+
+    private var _viewModel: ContentViewModel!
     
     private lazy var _collectionView: UICollectionView = {
-        
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -63,44 +64,35 @@ extension NoteTypeHeaderView: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionView.dequeue(NoteCollectionViewCell.self, for: indexPath)
         cell.awakeFromNib()
         cell.textLabel.text = String(NoteType.allCases[indexPath.item].rawValue)
+        cell.layer.cornerRadius = 10
+        cell.clipsToBounds = true
         return cell
     }
     
-//    private func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//
-//        //        if let cell = collectionView.cellForItem(at: indexPath) as? NoteCollectionViewCell {
-//        //            cell.showIcon()
-//        //            print("clicked")
-//        //        }
-//
-//
-//        guard let cell = collectionView.cellForItem(at: indexPath) else { return <#default value#> }
-//            print("test did select: \(indexPath)"  )
-//        return cell
-//    }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selecetedNoteType(indexPath: indexPath.row)
+//        _viewModel.filteredNotes(fortype: NoteApp.shared.selectedType)
+    }
+    
+    
+}
 
-    }
+
+extension NoteTypeHeaderView {
     
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        print("clicked")
-        //        if let cell = collectionView.cellForItem(at: indexPath) as? NoteCollectionViewCell {
-        //                cell.hideIcon()
-        //            print("clicked")
-        //            }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-        //        if let cell = collectionView.cellForItem(at: indexPath) {
-        //            cell.contentView.backgroundColor = .red
-        //            }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
-        //        if let cell = collectionView.cellForItem(at: indexPath) {
-        //                cell.contentView.backgroundColor = nil
-        //            }
+    func selecetedNoteType(indexPath:Int) {
+        switch indexPath {
+        case 0:
+            NoteApp.shared.selectedType = .allNotes
+        case 1:
+            NoteApp.shared.selectedType = .audioNote
+        case 2:
+            NoteApp.shared.selectedType = .reminderNote
+        case 3:
+            NoteApp.shared.selectedType = .imageNote
+        default:
+            NoteApp.shared.selectedType = .allNotes
+        }
     }
     
 }
