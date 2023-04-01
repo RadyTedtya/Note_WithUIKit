@@ -28,19 +28,19 @@ class ImageNoteTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top:20, left: 20, bottom: 20, right: 20))
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top:10, left: 20, bottom: 10, right: 20))
         contentView.backgroundColor = .white
         contentView.layer.cornerRadius = 10
     }
     
-    func configureCell(cell: ImageNoteTableViewCell, cellIndex: Int) -> UITableViewCell {
-        let note: Note = Note.dummyImageNote
-        let imageNote = UIImage(named: note.image  ?? "photo")
-        cell.titleLabel.text = note.title
-        cell.dateLabel.text = note.date
-        cell.pictureImageView = imageNote
-        cell.descriptionLabel.text = note.description
-        return cell
-    }
+//    func configureCell(cell: ImageNoteTableViewCell, cellIndex: Int) -> UITableViewCell {
+//        let note: Note = Note.dummyImageNote
+//        let imageNote = UIImage(named: note.image  ?? "photo")
+//        cell.titleLabel.text = note.title
+//        cell.dateLabel.text = note.date
+//        cell.pictureImageView = imageNote
+//        cell.descriptionLabel.text = note.description
+//        return cell
+//    }
     
 }

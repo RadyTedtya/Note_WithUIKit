@@ -20,37 +20,11 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        _contentView.populateData()
-        setup()
+        _contentView.populateData()//test data
+        setupHomeView()
     }
     
-    @IBAction func moveToCreateNoteView(_ sender: Any) {
-        let viewController = UINavigationController(rootViewController: CreateNoteViewController())
-        viewController.modalPresentationStyle = .fullScreen
-        viewController.navigationBar.backgroundColor = .primaryBackgroundColor
-        self.present(viewController, animated: true)
-    }
     
-    func setup() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: self, action: #selector(moveToLoginView))
-        title = "Home View"
-        
-        searchController.searchBar.barTintColor = .primaryBackgroundColor
-        tableView.register(ImageNoteTableViewCell.self)
-        tableView.register(AudioNoteTableViewCell.self)
-        tableView.register(ReminderTableViewCell.self)
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.tableHeaderView = searchController.searchBar
-    }
-    
-    @objc func moveToLoginView() {
-        if NoteApp.shared.isLogin {
-            navigationController?.pushViewController(SignOutViewController(), animated: true)
-        } else {
-            navigationController?.pushViewController(LoginViewController(), animated: true)
-        }
-    }
     
 }
 
@@ -58,7 +32,6 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(_contentView.notes.count)
         var cell: UITableViewCell = .init()
         switch _contentView.notes[indexPath.row].noteType {
         case .allNotes:
@@ -98,4 +71,37 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("selected \(indexPath.row)")
     }
+}
+
+
+extension HomeViewController {
+    
+    @IBAction func moveToCreateNoteView(_ sender: Any) {
+        let viewController = UINavigationController(rootViewController: CreateNoteViewController())
+        viewController.modalPresentationStyle = .fullScreen
+        viewController.navigationBar.backgroundColor = .primaryBackgroundColor
+        self.present(viewController, animated: true)
+    }
+    
+    func setupHomeView() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: self, action: #selector(moveToLoginView))
+        title = "Home View"
+        searchController.searchBar.barTintColor = .primaryBackgroundColor
+        tableView.register(ImageNoteTableViewCell.self)
+        tableView.register(AudioNoteTableViewCell.self)
+        tableView.register(ReminderTableViewCell.self)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.tableHeaderView = searchController.searchBar
+    }
+    
+    @objc func moveToLoginView() {
+        if NoteApp.shared.isLogin {
+            navigationController?.pushViewController(SignOutViewController(), animated: true)
+        } else {
+            navigationController?.pushViewController(LoginViewController(), animated: true)
+        }
+    }
+    
+    
 }

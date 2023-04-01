@@ -31,6 +31,7 @@ extension ContentViewModel {
     
     //populate test data
     func populateData() {
+        notes = []
         for _ in 1...4 {
             notes.append(Note.dummyAudioNote)
             notes.append(Note.dummyImageNote)
