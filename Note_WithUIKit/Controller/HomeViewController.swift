@@ -77,10 +77,14 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 extension HomeViewController {
     
     @IBAction func moveToCreateNoteView(_ sender: Any) {
-        let viewController = UINavigationController(rootViewController: CreateNoteViewController())
-        viewController.modalPresentationStyle = .fullScreen
-        viewController.navigationBar.backgroundColor = .primaryBackgroundColor
-        self.present(viewController, animated: true)
+        if NoteApp.shared.isLogin {
+            let viewController = UINavigationController(rootViewController: CreateNoteViewController())
+            viewController.modalPresentationStyle = .fullScreen
+            viewController.navigationBar.backgroundColor = .primaryBackgroundColor
+            self.present(viewController, animated: true)
+        } else {
+            navigationController?.pushViewController(LoginViewController(), animated: true)
+        }
     }
     
     func setupHomeView() {
