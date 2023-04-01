@@ -57,14 +57,8 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
-    //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    //        let cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
-    //        cell.descriptionLabel.text = Note.dummyReminderNote.description
-    //        cell.backgroundColor = .primaryBackgroundColor
-    //        return cell
-    //    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print(_contentView.notes.count)
         var cell: UITableViewCell = .init()
         switch _contentView.notes[indexPath.row].noteType {
         case .allNotes:
@@ -79,7 +73,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
         }
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

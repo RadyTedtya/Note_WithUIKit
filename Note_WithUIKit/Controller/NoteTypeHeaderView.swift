@@ -13,7 +13,7 @@ class NoteTypeHeaderView: UIView {
     
     private lazy var _collectionView: UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        let collectionView = UICollectionView(frame:  .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -39,6 +39,7 @@ class NoteTypeHeaderView: UIView {
     
     
     func setupView() {
+        _collectionView.backgroundColor = .primaryBackgroundColor
         addSubview(_collectionView)
         NSLayoutConstraint.activate([
             _collectionView.topAnchor.constraint(equalTo: topAnchor),
@@ -74,6 +75,9 @@ extension NoteTypeHeaderView: UICollectionViewDelegate, UICollectionViewDataSour
 //        _viewModel.filteredNotes(fortype: NoteApp.shared.selectedType)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+    }
     
 }
 

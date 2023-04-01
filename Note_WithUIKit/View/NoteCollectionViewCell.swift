@@ -16,7 +16,15 @@ class NoteCollectionViewCell: UICollectionViewCell {
         setupSelectedCell()
     }
     
+    override var isSelected: Bool {
+        didSet {
+            textLabel.textColor = isSelected ? .white : .black
+        }
+    }
+    
     func setupSelectedCell() {
+        
+        textLabel.font = UIFont(name: UIFont.systemFontSize.description, size: 14)
         let backgroundView = UIView(frame: bounds)
         backgroundView.backgroundColor = UIColor.primaryColor
         self.backgroundView = backgroundView
@@ -24,7 +32,7 @@ class NoteCollectionViewCell: UICollectionViewCell {
         let selectedBackgroundView = UIView(frame: bounds)
         selectedBackgroundView.backgroundColor = UIColor.secondaryColor
         self.selectedBackgroundView = selectedBackgroundView
+        
     }
-    
     
 }
