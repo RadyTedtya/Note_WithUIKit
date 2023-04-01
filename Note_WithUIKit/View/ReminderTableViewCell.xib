@@ -65,7 +65,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="dateLabel" destination="Dpr-8O-hym" id="J2Y-l7-IpY"/>
                 <outlet property="descriptionLabel" destination="KWp-NQ-4rM" id="WtV-qQ-ajs"/>
+                <outlet property="profilePictureImageView" destination="9pj-dt-fAf" id="P29-fq-mbk"/>
+                <outlet property="titleLabel" destination="ViY-t3-6bx" id="mP8-hM-AvG"/>
             </connections>
             <point key="canvasLocation" x="174.04580152671755" y="96.126760563380287"/>
         </tableViewCell>

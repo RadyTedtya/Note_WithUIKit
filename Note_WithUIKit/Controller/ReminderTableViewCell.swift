@@ -11,6 +11,9 @@ class ReminderTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var profilePictureImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,13 +22,12 @@ class ReminderTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top:10, left: 20, bottom: 10, right: 20))
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top:10, left: 15, bottom: 10, right: 15))
         contentView.backgroundColor = .white
         contentView.layer.cornerRadius = 10
     }

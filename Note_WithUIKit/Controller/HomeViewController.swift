@@ -87,6 +87,7 @@ extension HomeViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: self, action: #selector(moveToLoginView))
         title = "Home View"
         searchController.searchBar.barTintColor = .primaryBackgroundColor
+        tableView.backgroundColor = .primaryBackgroundColor
         tableView.register(ImageNoteTableViewCell.self)
         tableView.register(AudioNoteTableViewCell.self)
         tableView.register(ReminderTableViewCell.self)

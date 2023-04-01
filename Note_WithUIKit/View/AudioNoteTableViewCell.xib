@@ -50,6 +50,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLabel" destination="hwO-3h-NOX" id="G3x-gd-EGf"/>
+                <outlet property="profilePictureImageView" destination="KgN-86-ssm" id="4yF-XR-D5W"/>
+                <outlet property="titleLabel" destination="5ga-TR-wOv" id="hCB-vj-8kA"/>
+            </connections>
             <point key="canvasLocation" x="258.01526717557249" y="78.16901408450704"/>
         </tableViewCell>
     </objects>
