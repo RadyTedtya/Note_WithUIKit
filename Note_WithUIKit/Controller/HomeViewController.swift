@@ -25,27 +25,46 @@ class HomeViewController: UIViewController {
     }
     
     
-    
 }
 
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: UITableViewCell = .init()
-        switch _contentView.notes[indexPath.row].noteType {
-        case .allNotes:
-            cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
-        case .audioNote:
-            cell = tableView.dequeue(AudioNoteTableViewCell.self, for: indexPath)
-        case .reminderNote:
-            cell = tableView.dequeue(ReminderTableViewCell.self, for: indexPath)
-        case .imageNote:
-            cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
-        default:
-            cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
-        }
+    func populateDataToCell(indexpath: IndexPath) -> UITableViewCell {
+        var cell = ImageNoteTableViewCell()
+        cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexpath)
+        cell.titleLabel.text = _contentView.notes[indexpath.row].title
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        var cell = UITableViewCell()
+        switch _contentView.notes[indexPath.row].noteType {
+        case .audioNote:
+            var cell = AudioNoteTableViewCell()
+            cell = tableView.dequeue(AudioNoteTableViewCell.self, for: indexPath)
+            cell.titleLabel?.text = _contentView.notes[indexPath.row].title
+            cell.dateLabel.text = _contentView.notes[indexPath.row].date
+            return cell
+        case .reminderNote:
+            var cell = ReminderTableViewCell()
+            cell = tableView.dequeue(ReminderTableViewCell.self, for: indexPath)
+            cell.titleLabel?.text = _contentView.notes[indexPath.row].title
+            cell.dateLabel.text = _contentView.notes[indexPath.row].date
+            return cell
+        case .imageNote:
+            var cell = ImageNoteTableViewCell()
+            cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
+            cell.titleLabel?.text = _contentView.notes[indexPath.row].title
+            cell.dateLabel.text = _contentView.notes[indexPath.row].date
+            return cell
+        default:
+            var cell = ImageNoteTableViewCell()
+            cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
+            cell.titleLabel?.text = _contentView.notes[indexPath.row].title
+            cell.dateLabel.text = _contentView.notes[indexPath.row].date
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

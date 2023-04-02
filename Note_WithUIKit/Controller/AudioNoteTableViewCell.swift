@@ -17,6 +17,7 @@ class AudioNoteTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        contentView.backgroundColor = .primaryBackgroundColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

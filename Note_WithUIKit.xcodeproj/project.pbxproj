@@ -258,12 +258,12 @@
 		D3DB582E29BAC15C00652A4C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D37711E629D1561700DCFCC2 /* NoteCollectionViewCell.xib */,
+				D37256E4299FA47E0056AD28 /* WelcomeViewController.xib */,
 				D37256EE299FA55F0056AD28 /* HomeViewController.xib */,
+				D37711E629D1561700DCFCC2 /* NoteCollectionViewCell.xib */,
 				D379ECFF29A88B4400E4DE26 /* LoginViewController.xib */,
 				D379ED0329A88B5900E4DE26 /* RegisterViewController.xib */,
 				D3E5D30B29B1C4C8006E817B /* SignOutViewController.xib */,
-				D37256E4299FA47E0056AD28 /* WelcomeViewController.xib */,
 				D37471FC29A3212100A16F50 /* CreateNoteViewController.xib */,
 				D336FA3A29A093EE00200E36 /* AudioNoteTableViewCell.xib */,
 				D37256F2299FA9050056AD28 /* ImageNoteTableViewCell.xib */,
@@ -282,12 +282,12 @@
 				D37711E429D155F300DCFCC2 /* NoteCollectionViewCell.swift */,
 				D37256ED299FA55F0056AD28 /* HomeViewController.swift */,
 				D379ECFE29A88B4400E4DE26 /* LoginViewController.swift */,
+				D3E5D30A29B1C4C8006E817B /* SignOutViewController.swift */,
 				D379ED0229A88B5900E4DE26 /* RegisterViewController.swift */,
+				D37471FB29A3212100A16F50 /* CreateNoteViewController.swift */,
 				D37256F1299FA9050056AD28 /* ImageNoteTableViewCell.swift */,
 				D336FA3929A093EE00200E36 /* AudioNoteTableViewCell.swift */,
 				D336FA3129A0822A00200E36 /* ReminderTableViewCell.swift */,
-				D3E5D30A29B1C4C8006E817B /* SignOutViewController.swift */,
-				D37471FB29A3212100A16F50 /* CreateNoteViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

@@ -19,7 +19,7 @@ class ImageNoteTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+        contentView.backgroundColor = .primaryBackgroundColor
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,15 +32,5 @@ class ImageNoteTableViewCell: UITableViewCell {
         contentView.backgroundColor = .white
         contentView.layer.cornerRadius = 10
     }
-    
-//    func configureCell(cell: ImageNoteTableViewCell, cellIndex: Int) -> UITableViewCell {
-//        let note: Note = Note.dummyImageNote
-//        let imageNote = UIImage(named: note.image  ?? "photo")
-//        cell.titleLabel.text = note.title
-//        cell.dateLabel.text = note.date
-//        cell.pictureImageView = imageNote
-//        cell.descriptionLabel.text = note.description
-//        return cell
-//    }
-    
+
 }
