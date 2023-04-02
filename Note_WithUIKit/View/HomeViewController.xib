@@ -25,14 +25,22 @@
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mg-EL-7Cd">
                     <rect key="frame" x="228" y="733" width="130" height="50"/>
+                    <color key="backgroundColor" red="0.38431372549999998" green="0.45098039220000002" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="130" id="Y47-Je-HTA"/>
                         <constraint firstAttribute="height" constant="50" id="nEJ-Wm-98C"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" title="  Create" cornerStyle="capsule" buttonSize="large">
-                        <color key="baseBackgroundColor" red="0.38431372549999998" green="0.45098039220000002" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
-                    </buttonConfiguration>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="  Create" image="plus" catalog="system">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="moveToCreateNoteView:" destination="-1" eventType="touchUpInside" id="RWG-l4-SA8"/>
                     </connections>
