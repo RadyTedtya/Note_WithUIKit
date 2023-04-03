@@ -9,6 +9,7 @@ import UIKit
 
 class NoteTypeHeaderView: UIView {
 
+    
     private var _viewModel: ContentViewModel!
     
     private lazy var _collectionView: UICollectionView = {
@@ -67,6 +68,14 @@ extension NoteTypeHeaderView: UICollectionViewDelegate, UICollectionViewDataSour
         cell.textLabel.text = String(NoteType.allCases[indexPath.item].rawValue)
         cell.layer.cornerRadius = 10
         cell.clipsToBounds = true
+        if (indexPath.row == 0) {
+            cell.isSelected = true
+        } else {
+            cell.isSelected = false
+        }
+        
+        cell.isSelected = indexPath.row ? true : false
+        
         return cell
     }
     
