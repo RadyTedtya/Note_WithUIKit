@@ -24,6 +24,11 @@ class ContentViewModel {
         return notes.filter { $0.noteType == type }
     }
     
+    func createNote() {
+        let note: Note! = .init()
+        notes.append(note)
+    }
+    
 }
 
 
@@ -38,6 +43,8 @@ extension ContentViewModel {
             notes.append(Note.dummyReminderNote)
         }
     }
+    
+    
     
     
     

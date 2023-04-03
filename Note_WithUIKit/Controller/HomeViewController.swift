@@ -24,7 +24,6 @@ class HomeViewController: UIViewController {
         setupHomeView()
     }
     
-    
 }
 
 

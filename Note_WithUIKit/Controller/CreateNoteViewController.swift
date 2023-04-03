@@ -9,7 +9,7 @@ import UIKit
 
 class CreateNoteViewController: UIViewController {
     
-    private let _viewModel: ContentViewModel = .init()
+    private var _viewModel: ContentViewModel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateTimeLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -24,12 +24,17 @@ class CreateNoteViewController: UIViewController {
         note = Note.dummyImageNote
         title = "Create New Note"
         navigationItem.rightBarButtonItem = .init(image: UIImage(systemName: "checkmark"), style: .plain, target: self, action: #selector(createNote))
+        navigationItem.leftBarButtonItem = .init(image: UIImage(systemName: "arrow.left"), style: .plain, target: self, action: #selector(self.dismissView))
         setStaticData()
+    }
+    
+    @objc func dismissView() {
+        navigationController?.popViewController(animated: true)
     }
     
     
     @objc func createNote() {
-//        _viewModel.createNote()
+        _viewModel.createNote()
     }
     
     func setStaticData() {
