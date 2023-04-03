@@ -10,37 +10,38 @@ import UIKit
 class CreateNoteViewController: UIViewController {
     
     private var _viewModel: ContentViewModel!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var dateTimeLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    
     var note: Note = .init(id: 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        populateStaticData()
     }
-    
+
+    @objc func createNote() {
+        _viewModel.createNote()
+    }
+
     func setup() {
         note = Note.dummyImageNote
         title = "Create New Note"
         navigationItem.rightBarButtonItem = .init(image: UIImage(systemName: "checkmark"), style: .plain, target: self, action: #selector(createNote))
         navigationItem.leftBarButtonItem = .init(image: UIImage(systemName: "arrow.left"), style: .plain, target: self, action: #selector(self.dismissView))
-        setStaticData()
     }
     
     @objc func dismissView() {
         navigationController?.popViewController(animated: true)
     }
     
-    
-    @objc func createNote() {
-        _viewModel.createNote()
+    func populateStaticData() {
+        titleTextField.text = "Spring Vacation"
+        dateLabel.text = "28 Dec 2017, 04:52PM"
+        descriptionTextView.text = Note.description
     }
     
-    func setStaticData() {
-        titleLabel.text = note.title.capitalized
-        dateTimeLabel.text = note.date
-        descriptionLabel.text = note.description
-    }
-
 }

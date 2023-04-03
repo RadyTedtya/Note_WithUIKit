@@ -10,9 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateNoteViewController" customModule="Note_WithUIKit" customModuleProvider="target">
             <connections>
-                <outlet property="dateTimeLabel" destination="NeC-BE-71P" id="tsm-Bq-sPZ"/>
-                <outlet property="descriptionLabel" destination="XP3-aJ-Jdd" id="39i-AK-Pj8"/>
-                <outlet property="titleLabel" destination="rWs-2U-BYf" id="Kqa-GP-fQu"/>
+                <outlet property="dateLabel" destination="NeC-BE-71P" id="o5W-U9-Sz3"/>
+                <outlet property="descriptionTextView" destination="QJV-nx-9oG" id="wjg-fY-mVy"/>
+                <outlet property="titleTextField" destination="P4b-h1-mzh" id="6zB-gY-nBT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,41 +21,48 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWs-2U-BYf">
-                    <rect key="frame" x="20.000000000000004" y="89" width="61.333333333333343" height="30"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeC-BE-71P">
-                    <rect key="frame" x="20" y="127" width="353" height="14"/>
+                    <rect key="frame" x="20" y="124" width="353" height="14"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                     <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XP3-aJ-Jdd">
-                    <rect key="frame" x="20" y="171" width="353" height="20.333333333333343"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Note Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P4b-h1-mzh">
+                    <rect key="frame" x="20" y="84" width="353" height="25"/>
                     <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QJV-nx-9oG">
+                    <rect key="frame" x="20" y="178" width="353" height="590"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NeC-BE-71P" secondAttribute="trailing" constant="20" id="0A3-kh-DX2"/>
-                <constraint firstItem="XP3-aJ-Jdd" firstAttribute="top" secondItem="NeC-BE-71P" secondAttribute="bottom" constant="30" id="12r-op-GEq"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XP3-aJ-Jdd" secondAttribute="trailing" constant="20" id="IiD-Pm-bDj"/>
-                <constraint firstItem="rWs-2U-BYf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="VHi-yI-fTF"/>
-                <constraint firstItem="NeC-BE-71P" firstAttribute="top" secondItem="rWs-2U-BYf" secondAttribute="bottom" constant="8" symbolic="YES" id="kNn-SQ-bIv"/>
+                <constraint firstItem="QJV-nx-9oG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Ral-v0-X7j"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="P4b-h1-mzh" secondAttribute="trailing" constant="20" id="Yfg-y0-RZs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QJV-nx-9oG" secondAttribute="bottom" constant="50" id="Zwj-lO-tT0"/>
+                <constraint firstItem="NeC-BE-71P" firstAttribute="top" secondItem="P4b-h1-mzh" secondAttribute="bottom" constant="15" id="eby-TV-xXi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QJV-nx-9oG" secondAttribute="trailing" constant="20" id="gFv-5C-gOh"/>
                 <constraint firstItem="NeC-BE-71P" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="l4u-EW-fpS"/>
-                <constraint firstItem="XP3-aJ-Jdd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="pQn-r2-xNP"/>
-                <constraint firstItem="rWs-2U-BYf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="qtu-hj-QNt"/>
+                <constraint firstItem="P4b-h1-mzh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="qf6-Gf-3dm"/>
+                <constraint firstItem="P4b-h1-mzh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="rAP-PQ-YZq"/>
+                <constraint firstItem="QJV-nx-9oG" firstAttribute="top" secondItem="NeC-BE-71P" secondAttribute="bottom" constant="40" id="rxw-cz-Bx2"/>
             </constraints>
-            <point key="canvasLocation" x="140" y="20"/>
+            <point key="canvasLocation" x="139.69465648854961" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
