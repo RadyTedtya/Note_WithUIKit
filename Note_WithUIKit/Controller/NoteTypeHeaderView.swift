@@ -73,9 +73,6 @@ extension NoteTypeHeaderView: UICollectionViewDelegate, UICollectionViewDataSour
         } else {
             cell.isSelected = false
         }
-        
-        cell.isSelected = indexPath.row ? true : false
-        
         return cell
     }
     
