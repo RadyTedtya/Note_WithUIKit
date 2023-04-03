@@ -15,12 +15,18 @@ class CreateNoteViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     
+    private lazy var collectionView: NoteTypeHeaderView = {
+        .init(frame: .init(x: 0, y: 0, width: view.frame.width, height: 80))
+    }()
+    
     var note: Note = .init(id: 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         populateStaticData()
+        view.addSubview(collectionView)
+        
     }
 
     @objc func createNote() {
@@ -45,3 +51,4 @@ class CreateNoteViewController: UIViewController {
     }
     
 }
+

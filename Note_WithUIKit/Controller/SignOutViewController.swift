@@ -13,7 +13,7 @@ class SignOutViewController: UIViewController {
     let alert = UIAlertController(title: "Sign out result", message: "Signed out", preferredStyle: .alert)
     
     override func viewDidLoad() {
-        super.viewDidLoad()   
+        super.viewDidLoad()
     }
     
     @IBAction func signOutUser(_ sender: Any) {
