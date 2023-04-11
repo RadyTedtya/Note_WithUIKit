@@ -14,6 +14,8 @@ class ContentViewModel {
     var db: Firestore!
     var notes: [Note] = []
     
+    
+    
     init() {
         firebaseSetup()
         populateData()

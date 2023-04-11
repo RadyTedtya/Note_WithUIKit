@@ -26,12 +26,12 @@ class NoteTypeHeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
+        setupCollectionView()
     }
     
     init() {
         super.init(frame: .zero)
-        setupView()
+        setupCollectionView()
     }
     
     required init?(coder: NSCoder) {
@@ -39,16 +39,7 @@ class NoteTypeHeaderView: UIView {
     }
     
     
-    func setupView() {
-        _collectionView.backgroundColor = .primaryBackgroundColor
-        addSubview(_collectionView)
-        NSLayoutConstraint.activate([
-            _collectionView.topAnchor.constraint(equalTo: topAnchor),
-            _collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            _collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            _collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
-        ])
-    }
+
     
 }
 
@@ -77,8 +68,7 @@ extension NoteTypeHeaderView: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selecetedNoteType(indexPath: indexPath.row)
-//        _viewModel.filteredNotes(fortype: NoteApp.shared.selectedType)
+//        selecetedNoteType(indexPath: indexPath.row)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -90,19 +80,17 @@ extension NoteTypeHeaderView: UICollectionViewDelegate, UICollectionViewDataSour
 
 extension NoteTypeHeaderView {
     
-    func selecetedNoteType(indexPath:Int) {
-        switch indexPath {
-        case 0:
-            NoteApp.shared.selectedType = .allNotes
-        case 1:
-            NoteApp.shared.selectedType = .audioNote
-        case 2:
-            NoteApp.shared.selectedType = .reminderNote
-        case 3:
-            NoteApp.shared.selectedType = .imageNote
-        default:
-            NoteApp.shared.selectedType = .allNotes
-        }
+    
+   
+    func setupCollectionView() {
+        _collectionView.backgroundColor = .primaryBackgroundColor
+        addSubview(_collectionView)
+        NSLayoutConstraint.activate([
+            _collectionView.topAnchor.constraint(equalTo: topAnchor),
+            _collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            _collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            _collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
+        ])
     }
     
 }

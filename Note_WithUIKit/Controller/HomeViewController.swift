@@ -12,7 +12,20 @@ class HomeViewController: UIViewController {
     private let _sectionHeight: CGFloat = 80
     let searchController: UISearchController! = .init()
     var _contentView: ContentViewModel = .init()
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
+    
+    var dataSource: [Note] {
+        switch NoteApp.shared.selectedType {
+        case .audioNote:
+            return _contentView.notes.filter { $0.noteType == .audioNote }
+        case .imageNote:
+            return _contentView.notes.filter { $0.noteType == .imageNote }
+        case .reminderNote:
+            return _contentView.notes.filter { $0.noteType == .reminderNote }
+        case .allNotes:
+            return _contentView.notes
+        }
+    }
     
     private lazy var noteTypeHeaderView: NoteTypeHeaderView = {
         .init(frame: .init(x: 0, y: 0, width: view.frame.width, height: _sectionHeight))
@@ -29,53 +42,38 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
-    func populateDataToCell(indexpath: IndexPath) -> UITableViewCell {
-        var cell = ImageNoteTableViewCell()
-        cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexpath)
-        cell.titleLabel.text = _contentView.notes[indexpath.row].title
-        return cell
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        var cell = UITableViewCell()
-        switch _contentView.notes[indexPath.row].noteType {
+        switch dataSource[indexPath.row].noteType {
         case .audioNote:
-            var cell = AudioNoteTableViewCell()
-            cell = tableView.dequeue(AudioNoteTableViewCell.self, for: indexPath)
-            cell.titleLabel?.text = _contentView.notes[indexPath.row].title
-            cell.dateLabel.text = _contentView.notes[indexPath.row].date
+            let cell = tableView.dequeue(AudioNoteTableViewCell.self, for: indexPath)
+            cell.titleLabel?.text = dataSource[indexPath.row].title
+            cell.dateLabel.text = dataSource[indexPath.row].date
             return cell
         case .reminderNote:
-            var cell = ReminderTableViewCell()
-            cell = tableView.dequeue(ReminderTableViewCell.self, for: indexPath)
-            cell.titleLabel?.text = _contentView.notes[indexPath.row].title
-            cell.dateLabel.text = _contentView.notes[indexPath.row].date
+            let cell = tableView.dequeue(ReminderTableViewCell.self, for: indexPath)
+            cell.titleLabel?.text = dataSource[indexPath.row].title
+            cell.dateLabel.text = dataSource[indexPath.row].date
             return cell
         case .imageNote:
-            var cell = ImageNoteTableViewCell()
-            cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
-            cell.titleLabel?.text = _contentView.notes[indexPath.row].title
-            cell.dateLabel.text = _contentView.notes[indexPath.row].date
+            let cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
+            cell.titleLabel?.text = dataSource[indexPath.row].title
+            cell.dateLabel.text = dataSource[indexPath.row].date
             return cell
         default:
-            var cell = ImageNoteTableViewCell()
-            cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
-            cell.titleLabel?.text = _contentView.notes[indexPath.row].title
-            cell.dateLabel.text = _contentView.notes[indexPath.row].date
+            let cell = tableView.dequeue(ImageNoteTableViewCell.self, for: indexPath)
+            cell.titleLabel?.text = dataSource[indexPath.row].title
+            cell.dateLabel.text = dataSource[indexPath.row].date
             return cell
         }
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return _contentView.notes.count
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
-    }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 430
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

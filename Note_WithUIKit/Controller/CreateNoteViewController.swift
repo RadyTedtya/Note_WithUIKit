@@ -15,9 +15,7 @@ class CreateNoteViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     
-    private lazy var collectionView: NoteTypeHeaderView = {
-        .init(frame: .init(x: 0, y: 0, width: view.frame.width, height: 80))
-    }()
+    @IBOutlet weak var noteTypeSegment: UISegmentedControl!
     
     var note: Note = .init(id: 0)
 
@@ -25,7 +23,6 @@ class CreateNoteViewController: UIViewController {
         super.viewDidLoad()
         setup()
         populateStaticData()
-        view.addSubview(collectionView)
         
     }
 
@@ -38,6 +35,9 @@ class CreateNoteViewController: UIViewController {
         title = "Create New Note"
         navigationItem.rightBarButtonItem = .init(image: UIImage(systemName: "checkmark"), style: .plain, target: self, action: #selector(createNote))
         navigationItem.leftBarButtonItem = .init(image: UIImage(systemName: "arrow.left"), style: .plain, target: self, action: #selector(self.dismissView))
+//        noteTypeSegment = UISegmentedControl(items: NoteType.allCases)
+        
+        
     }
     
     @objc func dismissView() {

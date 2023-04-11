@@ -249,8 +249,8 @@
 				D30A645D29B2F76000947B8A /* NoteApp.swift */,
 				D354E3B629AB298B00D62A60 /* User.swift */,
 				D37471F529A3001800A16F50 /* Note.swift */,
-				D354E3B429AB292500D62A60 /* LoginViewModel.swift */,
 				D3DB582B29BAC11E00652A4C /* ContentViewModel.swift */,
+				D354E3B429AB292500D62A60 /* LoginViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

@@ -16,6 +16,10 @@ enum NoteType: String, CaseIterable, Identifiable {
     case audioNote = "Audio"
     case reminderNote = "Reminder"
     case imageNote = "Image"
+    
+    static var noteTypes: [String] {
+        return NoteType.allCases.map { $0.rawValue }
+    }
 }
 
 struct Note: Identifiable {
