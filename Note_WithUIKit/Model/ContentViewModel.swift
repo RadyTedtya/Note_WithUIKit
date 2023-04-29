@@ -27,7 +27,7 @@ class ContentViewModel {
     }
     
     func createNote() {
-        let note: Note! = .init()
+        let note: Note! = .init(Note.dummyImageNote)
         notes.append(note)
     }
     
@@ -46,10 +46,6 @@ extension ContentViewModel {
         }
     }
     
-    
-    
-    
-    
     //Firebase Setup
     func firebaseSetup() {
         //[Start Firebase setup]
@@ -57,6 +53,36 @@ extension ContentViewModel {
         Firestore.firestore().settings = setting
         //[End setup]
         db = Firestore.firestore()
+    }
+    
+    //Firebase write data
+    func writeToFirebase() {
+        
+    }
+    
+    //Firebase read data
+    func readFromFirebase() {
+        notes.removeAll()
+        let ref = db.collection("Note")
+        ref.getDocuments() { snapshot, error in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            if let snapshot = snapshot {
+                for document in snapshot.documents {
+                    let data = document.data()
+                    let id = data["id"] as? Int ?? 0
+                    let title = data["title"] as? String ?? ""
+                    let date = data["date"] as? String ?? ""
+                    let audio = data["audio"] as? String ?? ""
+                    let image = data["image"] as? String ?? ""
+                    let description = data["description"] as? String ?? ""
+                    let newNote: Note = .init(id: id, title: title, date: date, audio: audio, image: image, description: description)
+                    self.notes.append(newNote)
+                }
+            }
+        }
     }
     
     //Add new document with generated ID
