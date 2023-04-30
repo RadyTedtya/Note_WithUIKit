@@ -56,8 +56,23 @@ extension ContentViewModel {
     }
     
     //Firebase write data
-    func writeToFirebase() {
-        
+    func writeToFirebase(note: Note) {
+        let ref = db.collection("Note")
+        ref.addDocument(data: [
+            "title": note.title ?? "",
+            "date": note.date ?? "",
+            "noteType": note.noteType ?? "",
+            "image": note.image ?? "",
+            "audio": note.audio ?? "",
+            "description": note.description ?? ""
+        ]) { error in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                print("Document added with ID: \(ref.collectionID)")
+            }
+            
+        }
     }
     
     //Firebase read data
