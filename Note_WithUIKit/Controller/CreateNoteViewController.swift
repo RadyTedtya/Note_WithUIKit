@@ -9,33 +9,27 @@ import UIKit
 
 class CreateNoteViewController: UIViewController {
     
-    private var _viewModel: ContentViewModel!
+    var _viewModel: ContentViewModel = .init()
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
-    
-    @IBOutlet weak var noteTypeSegment: UISegmentedControl!
-    
-    var note: Note = .init(id: 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        populateStaticData()
-        
     }
 
     @objc func createNote() {
-        _viewModel.createNote()
+        let note: Note = .init(id: 0, title: titleTextField.text, date: dateLabel.text, noteType: .imageNote, audio: nil, image: "image", description: descriptionTextView.text)
+        _viewModel.writeToFirebase(note: note)
     }
 
     func setup() {
-        note = Note.dummyImageNote
+
         title = "Create New Note"
         navigationItem.rightBarButtonItem = .init(image: UIImage(systemName: "checkmark"), style: .plain, target: self, action: #selector(createNote))
         navigationItem.leftBarButtonItem = .init(image: UIImage(systemName: "arrow.left"), style: .plain, target: self, action: #selector(self.dismissView))
-//        noteTypeSegment = UISegmentedControl(items: NoteType.allCases)
         
         
     }
