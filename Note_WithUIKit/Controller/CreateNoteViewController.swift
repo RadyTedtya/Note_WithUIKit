@@ -15,22 +15,22 @@ class CreateNoteViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
 
+    @IBOutlet var noteTypeSegment: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
-    }
-
-    @objc func createNote() {
-        let note: Note = .init(id: 0, title: titleTextField.text, date: dateLabel.text, noteType: .imageNote, audio: nil, image: "image", description: descriptionTextView.text)
-        _viewModel.writeToFirebase(note: note)
+        setup() 
     }
 
     func setup() {
 
         title = "Create New Note"
         navigationItem.rightBarButtonItem = .init(image: UIImage(systemName: "checkmark"), style: .plain, target: self, action: #selector(createNote))
-        navigationItem.leftBarButtonItem = .init(image: UIImage(systemName: "arrow.left"), style: .plain, target: self, action: #selector(self.dismissView))
-        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .plain, target: self , action: #selector(dismissView))
+        noteTypeSegment.removeAllSegments()
+        for item in NoteType.noteTypes {
+            noteTypeSegment.insertSegment(withTitle: item, at: noteTypeSegment.numberOfSegments, animated: false)
+        }
         
     }
     
@@ -38,10 +38,10 @@ class CreateNoteViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    func populateStaticData() {
-        titleTextField.text = "Spring Vacation"
-        dateLabel.text = "28 Dec 2017, 04:52PM"
-        descriptionTextView.text = Note.description
+    
+    @objc func createNote() {
+        let note: Note = .init(id: 0, title: titleTextField.text, date: dateLabel.text, noteType: .imageNote, audio: nil, image: "image", description: descriptionTextView.text)
+        _viewModel.writeToFirebase(note: note)
     }
     
 }
