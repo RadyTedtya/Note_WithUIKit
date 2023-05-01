@@ -32,9 +32,11 @@ class HomeViewController: UIViewController {
     }()
     
     override func viewDidLoad() {
+        NoteApp.shared.isLogin = true
         super.viewDidLoad()
-        _contentView.populateData()//test data
+        NoteApp.shared.isLogin ? _contentView.readFromFirebase() : _contentView.populateData()
         setupHomeView()
+        
     }
     
 }
@@ -93,14 +95,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 extension HomeViewController {
     
     @IBAction func moveToCreateNoteView(_ sender: Any) {
-        if NoteApp.shared.isLogin {
-            let viewController = UINavigationController(rootViewController: CreateNoteViewController())
-            viewController.modalPresentationStyle = .fullScreen
-            viewController.navigationBar.backgroundColor = .primaryBackgroundColor
-            self.present(viewController, animated: true)
-        } else {
-            navigationController?.pushViewController(LoginViewController(), animated: true)
-        }
+        NoteApp.shared.isLogin ? navigationController?.pushViewController(CreateNoteViewController(), animated: true) : navigationController?.pushViewController(LoginViewController(), animated: true)
     }
     
     func setupHomeView() {
