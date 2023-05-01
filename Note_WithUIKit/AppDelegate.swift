@@ -27,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Login Result at app delegate: \(isLogin)")
 //        let db = Firestore.firestore()
         // [END default_firestore]
-        
         return true
     }
 

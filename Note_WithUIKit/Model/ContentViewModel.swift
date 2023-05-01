@@ -61,7 +61,7 @@ extension ContentViewModel {
         ref.addDocument(data: [
             "title": note.title ?? "",
             "date": note.date ?? "",
-            "noteType": note.noteType ?? "",
+            "noteType": note.noteType.rawValue,
             "image": note.image ?? "",
             "audio": note.audio ?? "",
             "description": note.description ?? ""
