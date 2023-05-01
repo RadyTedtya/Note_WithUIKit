@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="dateLabel" destination="NeC-BE-71P" id="o5W-U9-Sz3"/>
                 <outlet property="descriptionTextView" destination="QJV-nx-9oG" id="wjg-fY-mVy"/>
+                <outlet property="noteTypeSegment" destination="j1s-eO-07G" id="uPJ-os-OG2"/>
                 <outlet property="titleTextField" destination="P4b-h1-mzh" id="6zB-gY-nBT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="B4g-Ux-8bj"/>
             </connections>
@@ -33,27 +34,39 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QJV-nx-9oG">
-                    <rect key="frame" x="20" y="178" width="353" height="630"/>
+                    <rect key="frame" x="20" y="189" width="353" height="619"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="j1s-eO-07G">
+                    <rect key="frame" x="10" y="148" width="373" height="32"/>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                </segmentedControl>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NeC-BE-71P" secondAttribute="trailing" constant="20" id="0A3-kh-DX2"/>
+                <constraint firstItem="QJV-nx-9oG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="7eJ-lM-Lxh"/>
+                <constraint firstAttribute="trailing" secondItem="j1s-eO-07G" secondAttribute="trailing" constant="10" id="J01-Qw-6NV"/>
                 <constraint firstItem="QJV-nx-9oG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Ral-v0-X7j"/>
+                <constraint firstItem="j1s-eO-07G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="UV0-qm-G2j"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="P4b-h1-mzh" secondAttribute="trailing" constant="20" id="Yfg-y0-RZs"/>
                 <constraint firstItem="NeC-BE-71P" firstAttribute="top" secondItem="P4b-h1-mzh" secondAttribute="bottom" constant="15" id="eby-TV-xXi"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QJV-nx-9oG" secondAttribute="bottom" constant="10" id="f5m-fp-4Gg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QJV-nx-9oG" secondAttribute="trailing" constant="20" id="gFv-5C-gOh"/>
+                <constraint firstItem="j1s-eO-07G" firstAttribute="top" secondItem="NeC-BE-71P" secondAttribute="bottom" constant="10" id="hHP-43-Pdf"/>
                 <constraint firstItem="NeC-BE-71P" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="l4u-EW-fpS"/>
+                <constraint firstItem="QJV-nx-9oG" firstAttribute="top" secondItem="j1s-eO-07G" secondAttribute="bottom" constant="10" id="mW2-KE-Wd9"/>
                 <constraint firstItem="P4b-h1-mzh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="qf6-Gf-3dm"/>
                 <constraint firstItem="P4b-h1-mzh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="rAP-PQ-YZq"/>
-                <constraint firstItem="QJV-nx-9oG" firstAttribute="top" secondItem="NeC-BE-71P" secondAttribute="bottom" constant="40" id="rxw-cz-Bx2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QJV-nx-9oG" secondAttribute="bottom" constant="10" id="rus-ci-LAQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QJV-nx-9oG" secondAttribute="trailing" constant="20" id="ugT-Dm-rIg"/>
             </constraints>
             <point key="canvasLocation" x="139.69465648854961" y="19.718309859154932"/>
         </view>
