@@ -59,11 +59,6 @@ extension NoteTypeHeaderView: UICollectionViewDelegate, UICollectionViewDataSour
         cell.textLabel.text = String(NoteType.allCases[indexPath.item].rawValue)
         cell.layer.cornerRadius = 10
         cell.clipsToBounds = true
-        if (indexPath.row == 0) {
-            cell.isSelected = true
-        } else {
-            cell.isSelected = false
-        }
         return cell
     }
     
@@ -83,6 +78,8 @@ extension NoteTypeHeaderView {
     
    
     func setupCollectionView() {
+        let firstIndexPath = NSIndexPath(item: 0, section: 0)
+        _collectionView.selectItem(at: firstIndexPath as IndexPath, animated: false, scrollPosition: .init())
         _collectionView.backgroundColor = .primaryBackgroundColor
         addSubview(_collectionView)
         NSLayoutConstraint.activate([
