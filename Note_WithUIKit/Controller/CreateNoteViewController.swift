@@ -33,8 +33,17 @@ class CreateNoteViewController: UIViewController {
                 noteTypeSegment.insertSegment(withTitle: item.rawValue, at: noteTypeSegment.numberOfSegments, animated: false)
             }
         }
-        noteTypeSegment.selectedSegmentIndex = 0
-        
+        noteTypeSegment.selectedSegmentIndex = 0   
+        dateLabel.text = "\(fetchCurrentDateTime())"
+          
+    }
+    
+    func fetchCurrentDateTime() -> String {
+        let date = Date()
+        let df = DateFormatter()
+        df.dateFormat = "dd-MM-yyyy HH:mm:ss"
+        let dateString = df.string(from: date)
+        return dateString
     }
     
     @objc func dismissView() {
