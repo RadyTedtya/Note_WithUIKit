@@ -28,9 +28,12 @@ class CreateNoteViewController: UIViewController {
         navigationItem.rightBarButtonItem = .init(image: UIImage(systemName: "checkmark"), style: .plain, target: self, action: #selector(createNote))
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .plain, target: self , action: #selector(dismissView))
         noteTypeSegment.removeAllSegments()
-        for item in NoteType.noteTypes {
-            noteTypeSegment.insertSegment(withTitle: item, at: noteTypeSegment.numberOfSegments, animated: false)
+        for item in NoteType.allCases {
+            if item != .allNotes {
+                noteTypeSegment.insertSegment(withTitle: item.rawValue, at: noteTypeSegment.numberOfSegments, animated: false)
+            }
         }
+        noteTypeSegment.selectedSegmentIndex = 0
         
     }
     
@@ -40,7 +43,20 @@ class CreateNoteViewController: UIViewController {
     
     
     @objc func createNote() {
-        let note: Note = .init(id: 0, title: titleTextField.text, date: dateLabel.text, noteType: .imageNote, audio: nil, image: "image", description: descriptionTextView.text)
+        var selectedNoteType: NoteType {
+            switch noteTypeSegment.selectedSegmentIndex {
+            case 0:
+                return .audioNote
+            case 1:
+                return .reminderNote
+            case 2:
+                return .imageNote
+            default:
+                return .audioNote
+            }
+        }
+        
+        let note: Note = .init(id: 0, title: titleTextField.text, date: dateLabel.text, noteType: selectedNoteType, audio: nil, image: "image", description: descriptionTextView.text)
         _viewModel.writeToFirebase(note: note)
     }
     

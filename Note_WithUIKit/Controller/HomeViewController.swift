@@ -32,8 +32,8 @@ class HomeViewController: UIViewController {
     }()
     
     override func viewDidLoad() {
-        NoteApp.shared.isLogin = true
         super.viewDidLoad()
+        NoteApp.shared.isLogin = false
         NoteApp.shared.isLogin ? _contentView.readFromFirebase() : _contentView.populateData()
         setupHomeView()
         
