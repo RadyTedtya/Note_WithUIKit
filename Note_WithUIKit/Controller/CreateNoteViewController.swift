@@ -33,7 +33,7 @@ class CreateNoteViewController: UIViewController {
                 noteTypeSegment.insertSegment(withTitle: item.rawValue, at: noteTypeSegment.numberOfSegments, animated: false)
             }
         }
-        noteTypeSegment.selectedSegmentIndex = 0   
+        noteTypeSegment.selectedSegmentIndex = 0
         dateLabel.text = "\(fetchCurrentDateTime())"
           
     }
