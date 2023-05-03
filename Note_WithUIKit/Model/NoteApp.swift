@@ -16,6 +16,14 @@ class NoteApp {
     
     static let shared = NoteApp()
     
+    func nextViewController(currentVC: ViewController, nextVC: ViewController) {
+        let nextVC = UINavigationController(rootViewController: nextVC)
+        nextVC.modalPresentationStyle = .fullScreen
+        nextVC.navigationBar.backgroundColor = .primaryBackgroundColor
+        currentVC.present(nextVC, animated: true)
+//        self.present(nextVC, animated: true)
+    }
+    
     private init() {
          
     }

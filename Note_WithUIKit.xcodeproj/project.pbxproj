@@ -278,9 +278,9 @@
 			children = (
 				D37256B7299FA1170056AD28 /* ViewController.swift */,
 				D37256E3299FA47E0056AD28 /* WelcomeViewController.swift */,
+				D37256ED299FA55F0056AD28 /* HomeViewController.swift */,
 				D354E3BA29AB5B8800D62A60 /* NoteTypeHeaderView.swift */,
 				D37711E429D155F300DCFCC2 /* NoteCollectionViewCell.swift */,
-				D37256ED299FA55F0056AD28 /* HomeViewController.swift */,
 				D379ECFE29A88B4400E4DE26 /* LoginViewController.swift */,
 				D3E5D30A29B1C4C8006E817B /* SignOutViewController.swift */,
 				D379ED0229A88B5900E4DE26 /* RegisterViewController.swift */,

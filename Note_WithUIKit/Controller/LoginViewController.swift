@@ -45,7 +45,7 @@ class LoginViewController: UIViewController {
             if NoteApp.shared.isLogin {
                 self.alert.title = "Login Success"
                 let alertAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
-                    self.navigationController?.popViewController(animated: true)
+                    self.moveToHome()
                 }
                 self.alert.addAction(alertAction)
                 self.present(self.alert, animated: true, completion: nil)
@@ -56,6 +56,13 @@ class LoginViewController: UIViewController {
                 self.present(self.alert, animated: true, completion: nil)
             }
         })
+    }
+    
+    func moveToHome() {
+        let homeViewController = UINavigationController(rootViewController: HomeViewController())
+        homeViewController.modalPresentationStyle = .fullScreen
+        homeViewController.navigationBar.backgroundColor = .primaryBackgroundColor
+        self.present(homeViewController, animated: true)
     }
     
     @IBAction func registerButton(_ sender: Any) {
