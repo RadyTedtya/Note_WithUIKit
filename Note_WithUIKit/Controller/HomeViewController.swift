@@ -118,11 +118,9 @@ extension HomeViewController {
     }
     
     @objc func moveToLoginView() {
-        if NoteApp.shared.isLogin {
-            navigationController?.pushViewController(SignOutViewController(), animated: true)
-        } else {
-            navigationController?.pushViewController(LoginViewController(), animated: true)
-        }
+        NoteApp.shared.isLogin ? navigationController?.pushViewController(SignOutViewController(), animated: true) : navigationController?.pushViewController(LoginViewController(), animated: true)
+        
+        
     }
     
     

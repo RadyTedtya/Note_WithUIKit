@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
     }
     
     @objc func dismissView() {
-        navigationController?.popViewController(animated: true)
+        moveToHome()
     }
     
     @IBAction func loginButton(_ sender: Any) {
