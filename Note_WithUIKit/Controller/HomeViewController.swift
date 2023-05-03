@@ -97,13 +97,6 @@ extension HomeViewController {
         NoteApp.shared.isLogin ? navigationController?.pushViewController(CreateNoteViewController(), animated: true) : moveToLogin()
     }
     
-    func moveToLogin() {
-        let loginVC = UINavigationController(rootViewController: LoginViewController())
-        loginVC.modalPresentationStyle = .fullScreen
-        loginVC.navigationBar.backgroundColor = .primaryBackgroundColor
-        self.present(loginVC, animated: true)
-    }
-    
     func setupHomeView() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: self, action: #selector(moveToLoginView))
         title = "Home View"
@@ -118,10 +111,22 @@ extension HomeViewController {
     }
     
     @objc func moveToLoginView() {
-        NoteApp.shared.isLogin ? navigationController?.pushViewController(SignOutViewController(), animated: true) : navigationController?.pushViewController(LoginViewController(), animated: true)
-        
+        NoteApp.shared.isLogin ? moveToSignOut() : moveToLogin()
         
     }
     
+    func moveToSignOut() {
+        let signOutVC = UINavigationController(rootViewController: SignOutViewController())
+        signOutVC.modalPresentationStyle = .fullScreen
+        signOutVC.navigationBar.backgroundColor = .primaryBackgroundColor
+        self.present(signOutVC, animated: true)
+    }
+    
+    func moveToLogin() {
+        let loginVC = UINavigationController(rootViewController: LoginViewController())
+        loginVC.modalPresentationStyle = .fullScreen
+        loginVC.navigationBar.backgroundColor = .primaryBackgroundColor
+        self.present(loginVC, animated: true)
+    }
     
 }
