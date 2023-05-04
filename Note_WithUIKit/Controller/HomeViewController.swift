@@ -6,6 +6,7 @@
 
 
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
     
@@ -13,6 +14,9 @@ class HomeViewController: UIViewController {
     let searchController: UISearchController! = .init()
     var _contentView: ContentViewModel = .init()
     @IBOutlet var tableView: UITableView!
+    var loginViewModel: LoginViewModel = .init()
+    
+
     
     var dataSource: [Note] {
         switch NoteApp.shared.selectedType {
@@ -37,7 +41,6 @@ class HomeViewController: UIViewController {
         setupHomeView()
         
     }
-    
 }
 
 

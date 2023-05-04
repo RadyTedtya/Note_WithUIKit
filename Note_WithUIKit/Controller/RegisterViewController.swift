@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
 
@@ -21,7 +22,6 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     func setup() {
@@ -41,7 +41,15 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerButton(_ sender: Any) {
-        
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { result, error in
+            if error != nil {
+                print(error!.localizedDescription)
+            } else {
+                let homeVC = UINavigationController(rootViewController: HomeViewController())
+                homeVC.modalPresentationStyle = .fullScreen
+                self.present(homeVC, animated: true)
+            }
+        }
     }
     
 }

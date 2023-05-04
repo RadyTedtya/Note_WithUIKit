@@ -10,7 +10,7 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
-    private let _viewModel: LoginViewModel! = .init()
+    var loginViewModel: LoginViewModel!
     var isLoading: Bool = false
     var alert = UIAlertController(title: "Title", message: nil, preferredStyle: .alert)
 
@@ -39,9 +39,9 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: Any) {
         isLoading = true
-        _viewModel.user.email = emailTextField!.text?.lowercased()
-        _viewModel.user.password = passwordTextField!.text?.lowercased()
-        _viewModel.loginUser(loginClosure: {
+        loginViewModel.user.email = emailTextField!.text?.lowercased()
+        loginViewModel.user.password = passwordTextField!.text?.lowercased()
+        loginViewModel.loginUser(loginClosure: {
             if NoteApp.shared.isLogin {
                 self.alert.title = "Login Success"
                 let alertAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
