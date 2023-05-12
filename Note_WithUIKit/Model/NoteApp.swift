@@ -14,6 +14,8 @@ class NoteApp {
     
     var selectedType: NoteType = .allNotes
     
+    var uid: String = ""
+    
     static let shared = NoteApp()
     
     private init() {

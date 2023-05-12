@@ -19,10 +19,11 @@ class LoginViewModel {
     
     func loginUser(loginClosure: @escaping () ->()) {
         Auth.auth().signIn(withEmail: self.user.email, password: self.user.password) { authResult, error in
-            defer { self.isLoading = false; loginClosure() }
+            defer { self.isLoading = false; loginClosure(); print("userID: \(NoteApp.shared.uid)")}
             if authResult != nil {
                 self.loginResult = true
                 NoteApp.shared.isLogin = true
+                NoteApp.shared.uid = Auth.auth().currentUser?.uid ?? ""
             } else {
                 self.loginResult = false
                 NoteApp.shared.isLogin = false
@@ -35,6 +36,7 @@ class LoginViewModel {
         do {
             try firebaseAuth.signOut()
             NoteApp.shared.isLogin = false
+            NoteApp.shared.uid = ""
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
         }
