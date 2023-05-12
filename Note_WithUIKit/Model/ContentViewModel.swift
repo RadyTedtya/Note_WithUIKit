@@ -77,14 +77,13 @@ extension ContentViewModel {
     
     //Firebase: Delete firebase collection
     func deleteFirebaseCollection() {
-        db.collection("cities").document("DC").delete() { err in
-            if let err = err {
-                print("Error removing document: \(err)")
+        db.collection("Notes").document("P0Grj0WvReMPtAl9CfTU").delete() { error in
+            if let error = error {
+                print(error.localizedDescription)
             } else {
-                print("Document successfully removed!")
+                print("Successfully deleted collection")
             }
         }
-        
     }
     
     func readFromFirebaseWithClosure(closure: @escaping ()->()) {
