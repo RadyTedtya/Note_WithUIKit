@@ -23,7 +23,6 @@ class CreateNoteViewController: UIViewController {
     }
 
     func setup() {
-
         title = "Create New Note"
         navigationItem.rightBarButtonItem = .init(image: UIImage(systemName: "checkmark"), style: .plain, target: self, action: #selector(createNote))
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .plain, target: self , action: #selector(dismissView))
@@ -47,7 +46,10 @@ class CreateNoteViewController: UIViewController {
     }
     
     @objc func dismissView() {
-        navigationController?.popViewController(animated: true)
+        let homeViewController = UINavigationController(rootViewController: HomeViewController())
+        homeViewController.modalPresentationStyle = .fullScreen
+        homeViewController.navigationBar.backgroundColor = .primaryBackgroundColor
+        self.present(homeViewController, animated: true)
     }
     
     

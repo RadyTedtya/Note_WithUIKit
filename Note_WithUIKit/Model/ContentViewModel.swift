@@ -10,7 +10,7 @@ import UIKit
 import FirebaseFirestore
 
 class ContentViewModel {
-
+    
     var db: Firestore!
     var notes: [Note] = []
     
@@ -46,7 +46,7 @@ extension ContentViewModel {
         }
     }
     
-    //Firebase Setup
+    //Firebase: Setup firestore
     func firebaseSetup() {
         //[Start Firebase setup]
         let setting = FirestoreSettings()
@@ -55,7 +55,7 @@ extension ContentViewModel {
         db = Firestore.firestore()
     }
     
-    //Firebase write data
+    //Firebase: write data in firebase
     func writeToFirebase(note: Note) {
         let ref = db.collection("Note")
         ref.addDocument(data: [
@@ -75,8 +75,19 @@ extension ContentViewModel {
         }
     }
     
-    //Firebase read data
-    func readFromFirebase() {
+    //Firebase: Delete firebase collection
+    func deleteFirebaseCollection() {
+        db.collection("cities").document("DC").delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
+        
+    }
+    
+    func readFromFirebaseWithClosure(closure: @escaping ()->()) {
         notes.removeAll()
         let ref = db.collection("Note")
         ref.getDocuments() { snapshot, error in
@@ -86,6 +97,7 @@ extension ContentViewModel {
             }
             if let snapshot = snapshot {
                 for document in snapshot.documents {
+                    defer { print("Completed fetching data..."); closure()  }
                     let data = document.data()
                     let id = data["id"] as? Int ?? 0
                     let title = data["title"] as? String ?? ""
@@ -93,7 +105,20 @@ extension ContentViewModel {
                     let audio = data["audio"] as? String ?? ""
                     let image = data["image"] as? String ?? ""
                     let description = data["description"] as? String ?? ""
-                    let newNote: Note = .init(id: id, title: title, date: date, audio: audio, image: image, description: description)
+                    let type = data["noteType"] as? String ?? ""
+                    let noteType: NoteType = {
+                        switch type.lowercased() {
+                        case "image":
+                            return NoteType.imageNote
+                        case "audio":
+                            return NoteType.audioNote
+                        case "reminder":
+                            return NoteType.reminderNote
+                        default:
+                            return NoteType.reminderNote
+                        }
+                    }()
+                    let newNote: Note = .init(id: id, title: title, date: date, noteType: noteType, audio: audio, image: image, description: description)
                     self.notes.append(newNote)
                 }
             }

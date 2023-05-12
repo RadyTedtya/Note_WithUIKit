@@ -10,7 +10,7 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
-    var loginViewModel: LoginViewModel!
+    var loginViewModel: LoginViewModel = .init()
     var isLoading: Bool = false
     var alert = UIAlertController(title: "Title", message: nil, preferredStyle: .alert)
 

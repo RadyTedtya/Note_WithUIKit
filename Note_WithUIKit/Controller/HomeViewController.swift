@@ -12,11 +12,12 @@ class HomeViewController: UIViewController {
     
     private let _sectionHeight: CGFloat = 80
     let searchController: UISearchController! = .init()
-    var _contentView: ContentViewModel = .init()
+    var _contentView: ContentViewModel! = .init()
     @IBOutlet var tableView: UITableView!
-    var loginViewModel: LoginViewModel = .init()
     
-
+    private lazy var noteTypeHeaderView: NoteTypeHeaderView = {
+        .init(frame: .init(x: 0, y: 0, width: view.frame.width, height: _sectionHeight))
+    }()
     
     var dataSource: [Note] {
         switch NoteApp.shared.selectedType {
@@ -31,17 +32,63 @@ class HomeViewController: UIViewController {
         }
     }
     
-    private lazy var noteTypeHeaderView: NoteTypeHeaderView = {
-        .init(frame: .init(x: 0, y: 0, width: view.frame.width, height: _sectionHeight))
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        NoteApp.shared.isLogin ? _contentView.readFromFirebase() : _contentView.populateData()
+        NoteApp.shared.isLogin ? _contentView.readFromFirebaseWithClosure(closure: {
+            self.tableView.reloadData()
+        }) : _contentView.populateData()
         setupHomeView()
         
     }
 }
+
+extension HomeViewController {
+    
+    func setupHomeView() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: self, action: #selector(moveToLoginView))
+        title = "Home View"
+        searchController.searchBar.barTintColor = .primaryBackgroundColor
+        tableView.backgroundColor = .primaryBackgroundColor
+        tableView.register(ImageNoteTableViewCell.self)
+        tableView.register(AudioNoteTableViewCell.self)
+        tableView.register(ReminderTableViewCell.self)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.tableHeaderView = searchController.searchBar
+    }
+    
+    @IBAction func moveToCreateNoteView(_ sender: Any) {
+                NoteApp.shared.isLogin ? moveToCreateNote() : moveToLogin()
+    }
+    
+    @objc func moveToLoginView() {
+        print(_contentView.notes.count)
+        NoteApp.shared.isLogin ? moveToSignOut() : moveToLogin()
+    }
+    
+    func moveToSignOut() {
+        let signOutVC = UINavigationController(rootViewController: SignOutViewController())
+        signOutVC.modalPresentationStyle = .fullScreen
+        signOutVC.navigationBar.backgroundColor = .primaryBackgroundColor
+        self.present(signOutVC, animated: true)
+    }
+    
+    func moveToLogin() {
+        let loginVC = UINavigationController(rootViewController: LoginViewController())
+        loginVC.modalPresentationStyle = .fullScreen
+        loginVC.navigationBar.backgroundColor = .primaryBackgroundColor
+        self.present(loginVC, animated: true)
+    }
+    
+    func moveToCreateNote() {
+        let createNoteVC = UINavigationController(rootViewController: CreateNoteViewController())
+        createNoteVC.modalPresentationStyle = .fullScreen
+        createNoteVC.navigationBar.backgroundColor = .primaryBackgroundColor
+        self.present(createNoteVC, animated: true)
+    }
+    
+}
+
 
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
@@ -94,42 +141,3 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 
-extension HomeViewController {
-    
-    @IBAction func moveToCreateNoteView(_ sender: Any) {
-        NoteApp.shared.isLogin ? navigationController?.pushViewController(CreateNoteViewController(), animated: true) : moveToLogin()
-    }
-    
-    func setupHomeView() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: self, action: #selector(moveToLoginView))
-        title = "Home View"
-        searchController.searchBar.barTintColor = .primaryBackgroundColor
-        tableView.backgroundColor = .primaryBackgroundColor
-        tableView.register(ImageNoteTableViewCell.self)
-        tableView.register(AudioNoteTableViewCell.self)
-        tableView.register(ReminderTableViewCell.self)
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.tableHeaderView = searchController.searchBar
-    }
-    
-    @objc func moveToLoginView() {
-        NoteApp.shared.isLogin ? moveToSignOut() : moveToLogin()
-        
-    }
-    
-    func moveToSignOut() {
-        let signOutVC = UINavigationController(rootViewController: SignOutViewController())
-        signOutVC.modalPresentationStyle = .fullScreen
-        signOutVC.navigationBar.backgroundColor = .primaryBackgroundColor
-        self.present(signOutVC, animated: true)
-    }
-    
-    func moveToLogin() {
-        let loginVC = UINavigationController(rootViewController: LoginViewController())
-        loginVC.modalPresentationStyle = .fullScreen
-        loginVC.navigationBar.backgroundColor = .primaryBackgroundColor
-        self.present(loginVC, animated: true)
-    }
-    
-}
