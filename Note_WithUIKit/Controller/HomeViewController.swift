@@ -58,11 +58,10 @@ extension HomeViewController {
     }
     
     @IBAction func moveToCreateNoteView(_ sender: Any) {
-                NoteApp.shared.isLogin ? moveToCreateNote() : moveToLogin()
+        NoteApp.shared.isLogin ? moveToCreateNote() : moveToLogin()
     }
     
     @objc func moveToLoginView() {
-        print(_contentView.notes.count)
         NoteApp.shared.isLogin ? moveToSignOut() : moveToLogin()
     }
     
