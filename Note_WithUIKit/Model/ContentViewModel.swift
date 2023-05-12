@@ -96,7 +96,7 @@ extension ContentViewModel {
             }
             if let snapshot = snapshot {
                 for document in snapshot.documents {
-                    defer { print("Completed fetching data..."); closure()  }
+                    defer { closure()  }
                     let data = document.data()
                     let id = data["id"] as? Int ?? 0
                     let title = data["title"] as? String ?? ""

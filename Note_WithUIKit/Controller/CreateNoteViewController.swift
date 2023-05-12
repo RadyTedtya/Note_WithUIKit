@@ -66,8 +66,8 @@ class CreateNoteViewController: UIViewController {
                 return .audioNote
             }
         }
-        
-        let note: Note = .init(id: 0, title: titleTextField.text, date: dateLabel.text, noteType: selectedNoteType, audio: nil, image: "image", description: descriptionTextView.text)
+        let uid = NoteApp.shared.uid
+        let note: Note = .init(id: 0, title: titleTextField.text, date: dateLabel.text, noteType: selectedNoteType, audio: nil, image: "image", description: descriptionTextView.text, uid: uid)
         _viewModel.writeToFirebase(note: note)
     }
     

@@ -3,7 +3,10 @@
 //  Note_WithUIKit
 //
 //  Created by Tedtya rady on 24/2/2023.
-//
+
+//    primary acc     Username: test1@gmail.com   Password: test123
+//    secondary acc   Username: test2@gmail.com   Password: password
+
 
 import UIKit
 import FirebaseAuth
@@ -28,6 +31,7 @@ class LoginViewController: UIViewController {
         passwordTextField.placeholder = "Password"
         emailTextField.text = "test1@gmail.com"
         passwordTextField.text = "test123"
+        
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .plain, target: self , action: #selector(dismissView))
         title = "Login"
         navigationItem.titleView?.backgroundColor = .secondaryColor
