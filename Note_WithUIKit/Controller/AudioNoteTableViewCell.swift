@@ -28,7 +28,7 @@ class AudioNoteTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top:10, left: 15, bottom: 10, right: 15))
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 3, left: 8, bottom: 3, right: 8))
         contentView.backgroundColor = .white
         contentView.layer.cornerRadius = 10
     }

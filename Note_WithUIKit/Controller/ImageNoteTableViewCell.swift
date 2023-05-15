@@ -13,13 +13,13 @@ class ImageNoteTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var pictureImageView: UIImage?
-    
+    @IBOutlet var pictureImageView: UIImageView!
+    @IBOutlet var cellSubView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        contentView.backgroundColor = .primaryBackgroundColor
+        contentView.backgroundColor = .primaryColor
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,9 +28,10 @@ class ImageNoteTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top:10, left: 20, bottom: 10, right: 20))
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 3, left: 8, bottom: 3, right: 8))
         contentView.backgroundColor = .white
         contentView.layer.cornerRadius = 10
+        contentView.addSubview(cellSubView)
     }
 
 }

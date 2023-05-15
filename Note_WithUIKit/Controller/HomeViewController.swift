@@ -55,6 +55,8 @@ extension HomeViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableHeaderView = searchController.searchBar
+        tableView.estimatedRowHeight = 44.0
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
     @IBAction func moveToCreateNoteView(_ sender: Any) {
@@ -123,6 +125,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         return UITableView.automaticDimension
     }
     
